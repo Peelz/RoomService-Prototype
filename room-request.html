@@ -1,55 +1,159 @@
-<!DOCTYPE html>
+
+
+ <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 
 	<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
+	<link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	
+	
+	<!-- css -->
+  	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
-	<script src="css/semantic.min.js"></script>
+	<script src="calendar-master/zabuto_calendar.min.js"></script>
+	
+<!-- <style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+h1 {
+   /* background-color: #2F4F4F;*/
+    color: #ffffff;
+   /* padding: 15px;*/
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#ffffff;
+    color: #000000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.aside {
+    background-color: #003333;
+    padding: 15px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer {
+    background-color: #2F4F4F;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
 
-	<!-- Include Required Prerequisites -->
-	<script type="text/javascript" src="semantic-ui-daterangepicker/moment.min.js"></script>
+.ui.dividing.header .icon {
+   			margin-bottom: 0;
+    		float: left;
+}
 
-	<!-- Include Date Range Picker -->
-	<script type="text/javascript" src="semantic-ui-daterangepicker/daterangepicker.js"></script>
-	<link rel="stylesheet" type="text/css" href="semantic-ui-daterangepicker/daterangepicker.css" />
+body{
+	background-color: #2E8B57;
+}
 
-	<title>	หน้าแรก </title>
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+</style> -->
 </head>
 <body>
-	<div class="row">
-		<div class="ui top massive menu">
-			<div class="item"> Lab Service </div>
-		</div>		
-	</div>
 
-	<div class="ui grid">
-		<div class="three wide column">
-			<div class="aside">
-				<div class="ui vertical large menu">
-				  <div class="item">
-					  <div class="header">ยินดีต้อรับเข้าสู่ระบบ</div>
-					  <div class="menu">
-						<div class="item">Admin</div>
-						<a href="#" class="item">แก้ไขข้อมูล</a>
-					  </div>
-				  </div>
-				  <a href="room-request.html" class="item blue active">ขอใช้ห้อง</a>
-				  <a href="edit.html" class="item">แก้ไข/ยกเลิก</a>
-				  <a href="#" class="item">ออกจากระบบ</a>
-				</div>
-			</div>			
+<div class="aside"><h1>LAB SERVICE</h1></div><br>	
+<!-- ส่วนเมนูข้างๆ -->
+	<div class="row">
+		<div class="col-3 col-m-3 menu">
+			<ul>
+					<div class="card">
+						  <div class="card-block">
+						    <h4 class="card-title">ยินดีต้อนรับเข้าสู่ระบบ ...</h4>
+						    <p class="card-text">Somsri</p>
+						  </div><br>
+						  <ul class="list-group list-group-flush">
+						  	<li class="list-group-item">
+					    		<a href="#" class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
+					    	</li>
+						    <li class="list-group-item">
+					    		<a href="room-request.html" class="item "><i class="building icon"></i>ขอใช้ห้อง</a>
+					    	</li>
+						    <li class="list-group-item">
+					    		<a href="edit.html" class="item"><i class="configure icon"></i>แก้ไข/ยกเลิก</a>
+					   		</li>
+						    <li class="list-group-item">
+					    		<a href="#" class="item"><i class="sign out icon"></i>ออกจากระบบ</a>
+					    	</li>
+						  </ul>
+					<div>
+			</ul>
 		</div>
 
-		<div class="thirteen wide column">
+<!-- ส่วนขอใช้งาน -->
+		<div class="col-9 col-m-9">
 			<div class="ui container">
 				<div class="content" >
 					<div class="ui segment">
 						<form action="" class="ui form">
-							<h2 class="ui header">ขอใช้ห้องแล็บ</h2>
+							<h2 class="ui header"><i class="building icon"></i>ขอใช้ห้องแล็บ</h2>
 							<table class="ui definition table" >
 							  	<tbody >
 									<tr>
@@ -61,8 +165,8 @@
 									  <td><input type="text" name="name" value=""></td>
 									</tr>
 									<tr>
-										<td>ผู้สอน</td>
-										<td>Lorem ipsum dolor sit amet</td>
+									  <td>ผ้สอน</td>
+									  <td><input type="text" name="name" value=""></td>
 									</tr>
 									<tr>
 										<td>จำนวนนิสิต</td>
@@ -77,14 +181,28 @@
 									<tr>
 										<td>วันที่</td>
 										<td><div class="ui icon input">
-											<input id="daterange" type="text" name="daterange" >
+											<input id="daterange" type="date" name="daterange" >
 											<i class="calendar Outline icon"></i>
 
 										</div></td>
 									</tr>
 									<tr>
-										<td>เวลา</td>
-										<td>*</td>
+									<td>เวลา</td>
+										<td>
+										<div class="ui icon input">
+											<input id="timePicker24Hour" type="time" name="timePicker24Hour">
+											<i class="time Outline icon"></i>
+										</div>&nbsp;&nbsp;ถึง&nbsp;
+
+										<div class="ui icon input">
+											<input id="timePicker24Hour" type="time" name="timePicker24Hour">
+											<i class="time Outline icon"></i>
+										</div>
+										</td>
+									</tr>
+									<tr>
+									  <td>ห้องเรียน</td>
+									  <td><input type="text" name="name" value=""></td>
 									</tr>
 									<tr>
 										<td>อาคาร</td>
@@ -112,48 +230,19 @@
 
 					</div>
 			</div>			
+
+		</div>
+
+
 		</div>
 	</div>
 
-
-
-
-
-	<script type="text/javascript">
-	// https://github.com/BreadMaker/semantic-ui-daterangepicker
-	$('#daterange').daterangepicker({
-        singleDatePicker: true
-    }, function(start, end, label) {
-        console.log(start.toISOString(), end.toISOString(), label);
-    });
-
-	</script>
-	<style>
-		.aside{
-			float: left;
-			display: inline-block;
-		}
-		.aside:after {
-		  content: "";
-		  display: table;
-		  clear: both;
-		}
-		.content{
-			width: 100%
-			display: inline-block;
-		}
-		.content:after {
-		  content: "";
-		  display: table;
-		  clear: both;
-		}
-		body {
-			background-color: #BEF5BE; 
-		}
-		.ui.massive.menu {
-    		background-color: #64CD3C;
-		}
-	</style>
+		
+	
+<!-- ส่วนล่าง -->
+	<div class="footer">
+	<p>Resize the browser window to see how the content respond to the resizing.</p>
+	</div>
 
 </body>
 </html>

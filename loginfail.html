@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
+  <link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.css' />
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/custom/style.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+  <script src="calendar-master/zabuto_calendar.min.js"></script>
+  <script src="css/semantic.min.js"></script>
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- graph -->
+  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
+  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script>
+</head>
+<body>
+
+  
+ <div class="aside"><h1>LAB SERVICE</h1></div>
+  <!-- เมนูข้างๆ -->
+  <div class="row">
+    <div class="col-3 col-m-3 menu">
+      <ul>
+       
+        <form action="" class="ui form">
+          <div class="field"><label for=""><br>ID :</label><input type="text"></div>
+          <div class="field"><label for="">Password :</label><input type="Password"></div>
+          <div class="inline field">
+              <div class="ui checkbox">
+                 <input type="checkbox" tabindex="0">
+                 <label><h5>Remember me</h5></label>
+              </div>
+              <button class="ui green button" onclick="myFunction()">LOGIN</button>
+              <script>
+                function myFunction() {
+                alert("ID หรือ Password ของคุณไม่ถูกต้อง\n กรุณาตรวจสอบใหม่");
+                }   
+              </script>
+          </div>    
+        </form>
+      </ul>
+    </div>
+
+<!-- ปฎิทิน -->
+ <div class="col-9 col-m-9">
+			<div class="container">
+				<div class="row">
+  				<div class="col-md-12" style="
+    				background-color: white;">
+				<div id='calendar'></div>
+				<script type="application/javascript">
+				    $(document).ready(function() {
+ 					 // page is now ready, initialize the calendar...
+  						// options and github  - http://fullcalendar.io/
+
+					$('#calendar').fullCalendar({
+   						 dayClick: function() {
+       						 alert('a day has been clicked!');
+    					}
+					});
+
+					});
+
+				</script>
+				</div>
+  			</div>
+
+		</div>
+
+
+			</div>
+		</div>
+
+
+  <div class="row">
+    <div class="col-3 col-m-3">
+    </div>
+
+<!-- ประวัติการจอง -->
+    <div class="col-9 col-m-9">
+      <div class="ui container">
+        <div class="content">
+          <table class="ui striped table">
+            <h2 class="ui dividing header"><i class="history icon"></i>ข้อมูลการใช้ห้อง<a class="anchor" id="content"></a></h2>
+            <thead> 
+              <tr>
+              <!-- <tr class="ui inverted grey table"> -->
+                <th>เวลา</th>
+                <th>ห้อง</th>
+                <th>อาคาร</th>
+                <th>อาจารย์ผู้สอน</th>
+              <th>รหัสวิชา</th>
+              <th>ชื่อวิชา</th>
+              <th>หมู่เรียน</th>
+              <th>หมายเหตุ</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div><br>
+
+<!-- กราฟ -->
+      <div class="ui container">
+        <div class="content">
+          <h2 class="ui dividing header"><i class="bar chart icon"></i>ข้อมูลสถิติ<a class="anchor" id="content"></a></h2><br>
+          
+        </div>
+        <script>
+      var chart = AmCharts.makeChart( "chartdiv", {
+        "type": "serial",
+        "theme": "light",
+        "dataProvider": [ {
+          "country": "USA",
+          "visits": 2025
+        }, {
+          "country": "China",
+          "visits": 1882
+        }, {
+          "country": "Japan",
+          "visits": 1809
+        }, {
+          "country": "Germany",
+          "visits": 1322
+        }, {
+          "country": "UK",
+          "visits": 1122
+        }, {
+          "country": "France",
+          "visits": 1114
+        }, {
+          "country": "India",
+          "visits": 984
+        }, {
+          "country": "Spain",
+          "visits": 711
+        }, {
+          "country": "Netherlands",
+          "visits": 665
+        }, {
+          "country": "Russia",
+          "visits": 580
+        }, {
+          "country": "South Korea",
+          "visits": 443
+        }, {
+          "country": "Canada",
+          "visits": 441
+        }, {
+          "country": "Brazil",
+          "visits": 395
+        } ],
+        "valueAxes": [ {
+          "gridColor": "#FFFFFF",
+          "gridAlpha": 0.2,
+          "dashLength": 0
+        } ],
+        "gridAboveGraphs": true,
+        "startDuration": 1,
+        "graphs": [ {
+          "balloonText": "[[category]]: <b>[[value]]</b>",
+          "fillAlphas": 0.8,
+          "lineAlpha": 0.2,
+          "type": "column",
+          "valueField": "visits"
+        } ],
+        "chartCursor": {
+          "categoryBalloonEnabled": false,
+          "cursorAlpha": 0,
+          "zoomable": false
+        },
+        "categoryField": "country",
+        "categoryAxis": {
+          "gridPosition": "start",
+          "gridAlpha": 0,
+          "tickPosition": "start",
+          "tickLength": 20
+        },
+        "export": {
+          "enabled": true
+        }
+
+      } );
+      </script>
+      <div id="chartdiv"style="overflow: visible;text-align: left;background-color: white;"></div>
+      </div>  
+    </div>
+  </div>
+
+    
+  
+<!-- ข้างสุด -->
+  <div class="footer">
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+  </div>
+
+</body>
+</html>
+

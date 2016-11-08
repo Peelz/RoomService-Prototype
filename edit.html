@@ -1,7 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
@@ -12,42 +14,54 @@
 	<script src="calendar-master/zabuto_calendar.min.js"></script>
 	<script src="css/semantic.min.js"></script>
 
+	<!-- css -->
+  	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
 
-	<title>	หน้าแรก </title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
+
+<div class="aside"><h1>LAB SERVICE</h1></div><br>	
+<!-- เมนูข้างๆ -->
 	<div class="row">
-		<div class="ui top massive menu">
-			<div class="item"> Lab Service </div>
-		</div>		
-	</div>
+		<div class="col-3 col-m-3 menu">
+			<ul>
+				
 
-
-	<div class="ui grid">
-		<div class="three wide column">
-			<div class="aside">
-				<div class="ui vertical large menu">
-				  <div class="item">
-					  <div class="header">ยินดีต้อรับเข้าสู่ระบบ</div>
-					  <div class="menu">
-						<div class="item">Admin</div>
-						<a href="#" class="item">แก้ไขข้อมูล</a>
-					  </div>
-				  </div>
-				  <a href="room-request.html" class="item ">ขอใช้ห้อง</a>
-				  <a href="edit.html" class="item blue active">แก้ไข/ยกเลิก</a>
-				  <a href="#" class="item">ออกจากระบบ</a>
-				</div>
-			</div>			
+					<div class="card">
+						  <!-- <img class="card-img-top" src="BG/woman.png" alt="Card image cap"> -->
+						  <div class="card-block">
+						    <h4 class="card-title">ยินดีต้อนรับเข้าสู่ระบบ ...</h4>
+						    <p class="card-text">Somsri</p>
+						  </div><br>
+						  <ul class="list-group list-group-flush">
+						  	<li class="list-group-item">
+					    		<a href="#" class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
+					    	</li>
+						    <li class="list-group-item">
+					    		<a href="room-request.html" class="item "><i class="building icon"></i>ขอใช้ห้อง</a>
+					    	</li>
+						    <li class="list-group-item">
+					    		<a href="edit.html" class="item"><i class="configure icon"></i>แก้ไข/ยกเลิก</a>
+					   		</li>
+						    <li class="list-group-item">
+					    		<a href="#" class="item"><i class="sign out icon"></i>ออกจากระบบ</a>
+					    	</li>
+						  </ul>
+					<div>
+			</ul>
 		</div>
 
-		<div class="thirteen wide column">
+<!-- ส่วนแก้ไขห้อง -->
+		<div class="col-9 col-m-9">
 			<div class="ui container">
 				<div class="content" >
 					<div class="ui segment">
+						<h2 class="ui header"><i class="configure icon"></i>แก้ไข/ยกเลิก</h2>
 						<table class="ui celled table" style="text-align:center;">
 							<thead >
 								<tr>
+								<!-- <tr class="ui inverted grey table"> -->
 									<th>ลำดับ</th>
 									<th>เวลา</th>
 									<th>วันที่</th>
@@ -69,8 +83,9 @@
 									<td></td>
 									<td></td>
 									<td></td>
-									<td><a href=""><i class="configure icon"></i></a></td>
-									<td><a href=""><i class="remove circle icon"></i></a></td>
+									<td><a href="room-request.html"><i class="configure icon"></i></a></td>
+									<td><a href=""><i class="remove circle icon" onclick="myFunction()"></i></a>
+									</td>
 								</tr>
 								<tr>
 									<td></td>
@@ -80,8 +95,8 @@
 									<td></td>
 									<td></td>
 									<td></td>
-									<td><a href=""><i class="configure icon"></i></a></td>
-									<td><a href=""><i class="remove circle icon"></i></a></td>
+									<td><a href="room-request.html"><i class="configure icon"></i></a></td>
+									<td><a href=""><i class="remove circle icon" onclick="myFunction()"></i></a></td>
 								</tr>
 								<tr>
 									<td></td>
@@ -91,47 +106,30 @@
 									<td></td>
 									<td></td>
 									<td></td>
-									<td><a href=""><i class="configure icon"></i></a></td>
-									<td><a href=""><i class="remove circle icon"></i></a></td>
+									<td><a href="room-request.html"><i class="configure icon"></i></a></td>
+									<td><a href=""><i class="remove circle icon" onclick="myFunction()"></i></a>
+									<script>
+                						function myFunction() {
+               							confirm("คุณแน่ใจว่าต้องการยกเลิกการจองห้องแล็บ ? ");
+                						}   
+              						</script></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 			</div>			
+			</div>			
+
+		</div>
 		</div>
 	</div>
 
-
-
-
-
-
-	<style>
-		.aside{
-			float: left;
-			display: inline-block;
-		}
-		.aside:after {
-		  content: "";
-		  display: table;
-		  clear: both;
-		}
-		.content{
-			width: 100%
-			display: inline-block;
-		}
-		.content:after {
-		  content: "";
-		  display: table;
-		  clear: both;
-		}
-		body {
-			background-color: #BEF5BE; 
-		}
-		.ui.massive.menu {
-    		background-color: #64CD3C;
-		}		
-	</style>
+		
+	
+<!-- ส่วนล่าง -->
+	<div class="footer">
+	<p>Resize the browser window to see how the content respond to the resizing.</p>
+	</div>
 
 </body>
 </html>
