@@ -1,35 +1,36 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
-  <link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
-  <link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel='stylesheet' href='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.css' />
+	<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
+	<link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel='stylesheet' href='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.css' />
   <!--dropdown-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- css -->
-  <link rel="stylesheet" type="text/css" href="css/custom/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+	<script src="calendar-master/zabuto_calendar.min.js"></script>
+	<script src="css/semantic.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
-  <script src="css/semantic.min.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
+	<script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script>
 
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	  <!-- css -->
+  	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
 
-  <!-- graph -->
-  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-<!--   <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
-  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script> -->
-<!-- ลองปฏิทิน -->
+	<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+	<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+	<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+	<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+  <!-- ลองปฏิทิน -->
   <meta charset="utf-8">
 
   <link rel="stylesheet" href="calendarjquerycss3/css/calendar.css" media="screen">
@@ -57,6 +58,13 @@
 				<h4 class="ui left aligned header"><br>&nbsp;&nbsp;&nbsp;ยินดีต้อนรับเข้าสู่ระบบ..</h4>
 				<p class="ui left aligned text-align">&nbsp;&nbsp;&nbsp;Somsri</p>				
 
+<!-- 					<div class="card">
+						  <div class="card-block">
+						    <h4 class="card-title">ยินดีต้อนรับเข้าสู่ระบบ ...</h4>
+						    <p class="card-text">Somsri</p>
+						  </div><br> 
+						  
+					<div>-->
           <li class="dropdown">
             <a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
           </li>
@@ -64,14 +72,23 @@
           <li class="dropdown">
             <a href="#" data-toggle="dropdown"class="item "><i class="building icon"></i>ขอใช้ห้องแล็บ <i class="icon-arrow"></i></a>
               <ul class="dropdown-menu">
-              <li><a href="room-request.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
-              <li><a href="edit.html"class="item "><i class="configure icon"></i>แก้ไขการจองห้อง</a></li>
-              <li><a href="edit.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li>
+              <li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
+              <li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไขการจองห้อง</a></li>
+              <li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li>
               </ul>
           </li>
-          
+
           <li class="dropdown">
-              <a href="index-auth.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
+            <a href="#" data-toggle="dropdown"class="item "><i class="add circle icon"></i>เพิ่มห้องแล็บ<i class="icon-arrow"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"class="item "><i class="pointing up icon"></i>เพิ่มห้องแล็บ</a></li>
+              <li><a href="#"class="item "><i class="configure icon"></i>แก้ไขการเพิ่มห้อง</a></li>
+              <li><a href="#"class="item "><i class="remove circle icon"></i>ยกเลิกการเพิ่มห้อง</a></li>
+              </ul>
+          </li>
+
+          <li class="dropdown">
+              <a href="index-auth-admin.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
           </li>
 
             <li class="dropdown">
@@ -80,12 +97,12 @@
 
           <!--dropdown-->
           <script src="css/room.js"></script> 
-      </ul>
+			</ul>
 		</div>
 
 <!-- ปฎิทิน -->
-  <div class="col-9 col-m-9">
-    <div class="container">
+ <div class="col-9 col-m-9">
+      <div class="container">
       <div class="ui grid">
         <div class="row">
           <div class="eight wide column">
@@ -198,8 +215,10 @@
           </div>
         </div>
     </div>
+
+
+    </div>
   </div>
-</div>
 
 <!-- ประวัติการใช้งานห้อง -->
 	<div class="row">

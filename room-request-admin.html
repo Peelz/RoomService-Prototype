@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,10 @@
 	<link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
 	<link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!--dropdown-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  	<link rel="stylesheet" href="css/style.css">
+	
 	
 	
 	<!-- css -->
@@ -128,7 +133,9 @@ body{
 						    <h4 class="card-title">ยินดีต้อนรับเข้าสู่ระบบ ...</h4>
 						    <p class="card-text">Somsri</p>
 						  </div><br> -->
-						  <li class="dropdown">
+						 
+					<!-- <div> -->
+					<li class="dropdown">
 						<a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
 					</li>
 
@@ -144,9 +151,9 @@ body{
 					<li class="dropdown">
 						<a href="#" data-toggle="dropdown"class="item "><i class="add circle icon"></i>เพิ่มห้องแล็บ<i class="icon-arrow"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>เพิ่มห้องแล็บ</a></li>
-							<li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไขการเพิ่มห้อง</a></li>
-							<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการเพิ่มห้อง</a></li>
+							<li><a href="#"class="item "><i class="pointing up icon"></i>เพิ่มห้องแล็บ</a></li>
+							<li><a href="#"class="item "><i class="configure icon"></i>แก้ไขการเพิ่มห้อง</a></li>
+							<li><a href="#"class="item "><i class="remove circle icon"></i>ยกเลิกการเพิ่มห้อง</a></li>
 					    </ul>
 					</li>
 
@@ -159,7 +166,8 @@ body{
 				    </li>
 
 					<!--dropdown-->
-					<script src="css/room.js"></script>	
+					<script src="css/room.js"></script>					
+						  
 			</ul>
 		</div>
 
@@ -169,12 +177,13 @@ body{
 				<div class="content" >
 					<div class="ui segment">
 						<form action="" class="ui form">
-							<h2 class="ui header"><i class="configure icon"></i>แก้ไขการขอใช้ห้องแล็บ</h2>
+							<h2 class="ui header"><i class="building icon"></i>ขอใช้ห้องแล็บ</h2>
 							<table class="ui definition table" >
 							  	<tbody >
 									<tr>
 									  <td>รหัสวิชา</td>
 									  <td><input type="text" name="name" value=""></td>
+									  	
 									</tr>
 									<tr>
 									  <td>หมู่เรียน</td>
@@ -239,7 +248,7 @@ body{
 
 								</tbody>
 							</table>
-							<button class="ui button" type="submit">บันทึก</button>
+							<button class="ui button" type="submit">ตรวจสอบ</button>
 							<button type="button" class="ui button" name="button">ค่าเริ่มต้น</button>
 
 						</form>
@@ -321,9 +330,10 @@ body{
 						<br>
 						<button class="ui button" type="submit">ตกลง</button>
 						<button type="button" class="ui button" name="button">ล้างข้อความ</button>
-
 					</div>
-			</div>			
+				
+			</div>	
+
 
 		</div>
 

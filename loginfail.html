@@ -13,9 +13,7 @@
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/custom/style.css">
 
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
-  <script src="calendar-master/zabuto_calendar.min.js"></script>
   <script src="css/semantic.min.js"></script>
 
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -26,70 +24,85 @@
   <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
   <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
   <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
-  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script>
+<!--   <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
+  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script> -->
+<!-- ลองปฏิทิน -->
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="calendarjquerycss3/css/calendar.css" media="screen">
+
+  <style type="text/css">
+  body
+  /*{width:960px;margin:0 auto}*/
+/*  .footer{margin-top:100px;
+    text-align:center;color:#666;
+    font:bold 14px Arial}*/
+    #wrapper{padding: 50px 0 0 325px;}
+    #calendar{margin:0px auto; width: 100%;}
+  </style>
+<meta name="robots" content="noindex,follow" />
+
+<!-- จบ -->
 </head>
 <body>
 
-  
- <div class="aside"><h1>LAB SERVICE</h1></div>
-  <!-- เมนูข้างๆ -->
-  <div class="row">
-    <div class="col-3 col-m-3 menu">
-      <ul>
-       
-        <form action="" class="ui form">
-          <div class="field"><label for=""><br>ID :</label><input type="text"></div>
-          <div class="field"><label for="">Password :</label><input type="Password"></div>
+<div class="aside"><h1>LAB SERVICE</h1></div>
+<div class="row">
+  <div class="col-3 col-m-3 menu">
+    <ul>
+      <form action="" class="ui form">
+        <div class="field"><label for=""><br>ID :</label><input type="text"></div>
+        <div class="field"><label for="">Password :</label><input type="Password"></div>
           <div class="inline field">
-              <div class="ui checkbox">
-                 <input type="checkbox" tabindex="0">
-                 <label><h5>Remember me</h5></label>
-              </div>
-              <button class="ui green button" onclick="myFunction()">LOGIN</button>
-              <script>
-                function myFunction() {
-                alert("ID หรือ Password ของคุณไม่ถูกต้อง\n กรุณาตรวจสอบใหม่");
-                }   
-              </script>
+            <div class="ui checkbox">
+              <input type="checkbox" tabindex="0">
+              <label><h5>Remember me</h5></label>
+            </div>
+            <button class="ui green button" onclick="myFunction()">LOGIN</button>
+            <script>
+              function myFunction() {
+              alert("ID หรือ Password ของคุณไม่ถูกต้อง\n กรุณาตรวจสอบใหม่");
+              }   
+            </script>
           </div>    
-        </form>
-      </ul>
-    </div>
-
-<!-- ปฎิทิน -->
- <div class="col-9 col-m-9">
-      <div class="container">
+      </form>
+    </ul>
+  </div>
+  <div class="col-9 col-m-9">
+    <div class="container">
       <div class="ui grid">
         <div class="row">
-          <div class="seven wide column">
+          <div class="eight wide column">
             <div class="col-md-12" style="
-                background-color: white;
-                width: 478px;
-                height: 420px;">
-            <div id='calendar'></div>
-              <script type="application/javascript">
-                $(document).ready(function() {
-             // page is now ready, initialize the calendar...
-                // options and github  - http://fullcalendar.io/
-                $('#calendar').fullCalendar({
-                  dayClick: function() {
-                  alert('a day has been clicked!');
-                  }
-                });
-              });
-              </script>
-          </div>
-          </div>
-          <div class="one wide column">
-          </div>
-          <div class="seven wide column">
-            <div class="ui teal inverted segment" style="
-              width: 478px;
-              height: 420px;">
-              <div class="content">
-                <h2 class="ui dividing header"><i class="bar chart icon"></i>ข้อมูลสถิติ<a class="anchor" id="content"></a></h2><br>
-              </div>
+              padding-top: 0%;
+              padding-right: 0%;
+              padding-bottom: 0%;
+              padding-left: 0%;">
+            <!-- <img src="calendarjquerycss3/img/title.png" alt=""> -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+                <script src="calendarjquerycss3/js/jquery-ui-datepicker.min.js"></script>
+                <div id="calendar" style="width: 100%;height: 150%;"></div>
+                  <script>
+                  $('#calendar').datepicker({
+                    inline: true,
+                    firstDay: 1,
+                    showOtherMonths: true,
+                    dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+                  });
+                </script>
+
+                <!-- <div class="footer"><p>By <a href="http://vtimbuc.net/">Valeriu Timbuc</a> for <a href="http://designmodo.com">DesignModo</a>.</p></div> -->
+
+                            </div>
+                          </div>
+<!--             <div class="one wide column">
+            </div> -->
+            <div class="seven wide column">
+              <div class="ui teal inverted segment" style="
+              width   : 115%;">
+                <div class="content">
+                   <h2 class="ui dividing header"><i class="bar chart icon"></i>ข้อมูลสถิติ<a class="anchor" id="content"></a></h2><br>
+                </div>
               <script>
               var chart = AmCharts.makeChart( "chartdiv", {
                 "type": "serial",
@@ -171,18 +184,14 @@
           </div>
         </div>
     </div>
+  </div>
+</div>
 
-
-    </div>
+<div class="row">
+  <div class="col-3 col-m-3">
   </div>
 
-
-  <div class="row">
-    <div class="col-3 col-m-3">
-    </div>
-
-<!-- ประวัติการจอง -->
-    <div class="col-9 col-m-9">
+  <div class="col-9 col-m-9">
     <div class="ui teal inverted segment">
       <div class="ui container">
         <div class="content">
@@ -235,17 +244,13 @@
             </tbody>
           </table>
         </div>
-        </div>
-      </div><br>
-    </div>
+      </div>
+    </div><br>
   </div>
+</div>
 
-    
-  
-<!-- ข้างสุด -->
   <div class="footer">
-  <p>Resize the browser window to see how the content respond to the resizing.</p>
+    <p>Resize the browser window to see how the content respond to the resizing.</p>
   </div>
-
 </body>
 </html>

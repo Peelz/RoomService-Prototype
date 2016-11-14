@@ -4,8 +4,8 @@
 .ui-datepicker tr,
 .ui-datepicker td,
 .ui-datepicker th {
-	margin: 0;
-	padding: 0;
+	margin: 0%;
+	padding: 0%;
 	border: none;
 	border-spacing: 0;
 }
@@ -13,19 +13,23 @@
 /* Calendar Wrapper */
 .ui-datepicker {
 	display: none;
-	width: 294px;
-	padding: 35px;
+	/*width: 480px;*/
+	/*display: block;*/
+	padding-top: 40%;
+	padding-left: 40%;
+	padding-bottom: 40%;
+	padding-right: 40%;
 	cursor: default;
 
 	text-transform: uppercase;
 	font-family: Tahoma;
-	font-size: 12px;
+	font-size: 16px;
 
 	background: #141517;	
 
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 
 	-webkit-box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);
 	-moz-box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);
@@ -35,7 +39,7 @@
 /* Calendar Header */
 .ui-datepicker-header {
 	position: relative;
-	padding-bottom: 10px;
+	padding-bottom: 40px;
 	border-bottom: 1px solid #d6d6d6;
 }
 
@@ -44,7 +48,7 @@
 /* Month */
 .ui-datepicker-month {
 	position: relative;
-	padding-right: 15px;
+	padding-right: 30px;
 	color: #565656;
 }
 
@@ -92,7 +96,7 @@
 
 .ui-datepicker-next {
 	right: 0;
-	padding-right: 0;
+	padding-right: 0%;
 }
 
 .ui-datepicker-prev span,
@@ -115,8 +119,8 @@
 
 /* Calendar "Days" */
 .ui-datepicker-calendar th {
-	padding-top: 15px;
-	padding-bottom: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	
 	text-align: center;
 	font-weight: normal;
@@ -124,7 +128,7 @@
 }
 
 .ui-datepicker-calendar td {
-	padding: 0 7px;
+	padding: 0 13px;
 	
 	text-align: center;
 	line-height: 26px;
@@ -132,13 +136,13 @@
 
 .ui-datepicker-calendar .ui-state-default {
 	display: block;
-	width: 26px;
+	width: 30px;
 	outline: none;
 
 	text-decoration: none;
 	color: #a8a8a8;
 	
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 }
 
 /* Day Active State*/
@@ -149,3 +153,29 @@
 
 /* Other Months Days*/
 .ui-datepicker-other-month .ui-state-default { color: #565656; }
+
+.ui-datepicker-inline {
+	display: block;
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-bottom: 40px;
+	padding-right: 40px;
+}
+
+
+
+/*.ui-datepicker-inline
+.ui-datepicker
+.ui-widget
+.ui-widget-content
+.ui-helper-clearfix
+.ui-corner-all
+" style="display: block;
+padding-top: 40px;
+padding-left: 40px;
+padding-bottom: 40px;
+padding-right: 40px;">
+<div class="ui-datepicker-header 
+ui-widget-header 
+ui-helper-clearfix 
+ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" onclick="DP_jQuery_1479139840862.datepicker._adjustDate('#calendar', -1, 'M');" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" onclick="DP_jQuery_1479139840862.datepicker._adjustDate('#calendar', +1, 'M');" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">November</span>&nbsp;<span class="ui-datepicker-year">2016</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th><span title="Monday">Mon</span></th><th><span title="Tuesday">Tue</span></th><th><span title="Wednesday">Wed</span></th><th><span title="Thursday">Thu</span></th><th><span title="Friday">Fri</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sat</span></th><th class="ui-datepicker-week-end"><span title="Sunday">Sun</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">31</span></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">1</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">2</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">3</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">4</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">5</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">6</a></td></tr><tr><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">7</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">8</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">9</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">10</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">11</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">12</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">13</a></td></tr><tr><td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default ui-state-highlight ui-state-active" href="#">14</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">15</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">16</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">17</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">18</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">19</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">20</a></td></tr><tr><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">21</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">22</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">23</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">24</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">25</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">26</a></td><td class=" ui-datepicker-week-end " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">27</a></td></tr><tr><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">28</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">29</a></td><td class=" " onclick="DP_jQuery_1479139840862.datepicker._selectDay('#calendar',10,2016, this);return false;"><a class="ui-state-default" href="#">30</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td></tr></tbody></table></div>*/
