@@ -493,6 +493,70 @@ body .fc {
 }
 
 
+/*Different Response Fields
+$('.ui.search')
+  .search({
+    apiSettings: {
+      url: '//api.github.com/search/repositories?q={query}'
+    },
+    fields: {
+      results : 'items',
+      title   : 'name',
+      url     : 'html_url'
+    },
+    minCharacters : 3
+  })
+;
+*/
+
+/*API Settings
+$('.ui.search')
+  .search({
+    type          : 'category',
+    minCharacters : 3,
+    apiSettings   : {
+      onResponse: function(githubResponse) {
+        var
+          response = {
+            results : {}
+          }
+        ;
+        // translate GitHub API response to work with search
+        $.each(githubResponse.items, function(index, item) {
+          var
+            language   = item.language || 'Unknown',
+            maxResults = 8
+          ;
+          if(index >= maxResults) {
+            return false;
+          }
+          // create new language category
+          if(response.results[language] === undefined) {
+            response.results[language] = {
+              name    : language,
+              results : []
+            };
+          }
+          // add result to category
+          response.results[language].results.push({
+            title       : item.name,
+            description : item.description,
+            url         : item.html_url
+          });
+        });
+        return response;
+      },
+      url: '//api.github.com/search/repositories?q={query}'
+    }
+  })
+;*/
+
+
+
+
+
+
+
 
 /*.list-group-flush li:hover {
     background-color: #0099cc;
@@ -503,11 +567,11 @@ body .fc {
     background-color: #0099cc;
 }
 */
-.ui.form input[type=date], 
+/*.ui.form input[type=date], 
 .ui.form input[type=datetime-local], 
 .ui.form input[type=tel], 
 .ui.form input[type=time], 
 .ui.form input[type=file], 
 .ui.form input[type=url], 
-.ui.form input[type=number]
+.ui.form input[type=number]*/
 

@@ -58,12 +58,15 @@
               <input type="checkbox" tabindex="0">
               <label><h5>Remember me</h5></label>
             </div>
-            <button class="ui green button" onclick="myFunction()">LOGIN</button>
-            <script>
-              function myFunction() {
-              alert("ID หรือ Password ของคุณไม่ถูกต้อง\n กรุณาตรวจสอบใหม่");
-              }   
-            </script>
+            <input type="button" value="LOGIN" class="ui green button"onclick="loginfail()" />
+
+                  <script>
+                      function loginfail() {
+                        document.getElementById('login').style.display ="block";
+                      }
+                  </script>
+
+                <div id="login" style="display:none;"><font color="red"> Incorret ID/Password. Please try again.</font></div>
           </div>    
       </form>
     </ul>

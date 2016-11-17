@@ -172,55 +172,86 @@ body{
 							<h2 class="ui header"><i class="configure icon"></i>แก้ไขการขอใช้ห้องแล็บ</h2>
 							<table class="ui definition table" >
 							  	<tbody >
-									<tr>
-									  <td>รหัสวิชา</td>
-									  <td><input type="text" name="name" value=""></td>
-									</tr>
-									<tr>
-									  <td>หมู่เรียน</td>
-									  <td><input type="text" name="name" value=""></td>
-									</tr>
-									<tr>
-									  <td>ผู้สอน</td>
-									  <td><input type="text" name="name" value=""></td>
-									</tr>
-									<tr>
-										<td>จำนวนนิสิต</td>
-										<td><div class="ui right labeled input">
-												  <input type="text" placeholder="">
-												  <div class="ui label">
-													  คน
-													</div>
-												</div>
-										</td>
-									</tr>
-									<tr>
-										<td>วันที่</td>
-										<td><div class="ui icon input">
-											<input id="daterange" type="date" name="daterange" >
-											<i class="calendar Outline icon"></i>
+					                  <tr>
+					                    <td>รหัสวิชา</td>
+					                    <td>
+					                    <!-- <td><input type="text" name="name" value=""></td> -->
+					                        <div class="ui search">
+					                          <div class="ui left icon input">
+					                            <input class="prompt" type="text" name="id_sub" placeholder="Search ID Subject" style="width: 180px; ">
+					                            <i class="search icon"></i>
+					                          </div>
+					                        </div>
+					                    </td> 
+					                  </tr>
+					                  <tr>
+					                    <td>หมู่เรียน</td>
+					                    <td>
+					                        <div class="ui search">
+					                          <div class="ui left icon input">
+					                            <input class="prompt" type="text" name="sec" placeholder="Search Sec"
+					                            style="width: 140px; ">
+					                            <i class="search icon"></i> 
+					                          </div>
+					                        </div>
+					                    </td>
+					                  </tr>
+					                  <tr>
+					                    <td>ผู้สอน</td>
+					                    <td>
+					                        <div class="ui search">
+					                          <div class="ui left icon input">
+					                            <input class="prompt" type="text" name="instructor" placeholder="Search Instructor" 
+					                            style="width: 370px; ">
+					                            <i class="search icon"></i>
+					                          </div>
+					                        </div>
+					                    </td>
+					                  </tr>
+					                  <tr>
+					                    <td>จำนวนนิสิต</td>
+					                    <td><div class="ui right labeled input">
+					                          <input type="text" placeholder="">
+					                          <div class="ui label">
+					                            คน
+					                          </div>
+					                        </div>
+					                    </td>
+					                  </tr>
+					                  <tr>
+					                    <td>วันที่</td>
+					                    <td><div class="ui icon input">
+					                      <input id="daterange" type="date" name="daterange" >
+					                      <i class="calendar Outline icon"></i>
 
-										</div></td>
-									</tr>
-									<tr>
-									<td>เวลา</td>
-										<td>
-										<div class="ui icon input">
-											<input id="timePicker24Hour" type="time" name="timePicker24Hour">
-											<i class="time Outline icon"></i>
-										</div>&nbsp;&nbsp;ถึง&nbsp;
+					                    </div></td>
+					                  </tr>
+					                  <tr>
+					                  <td>เวลา</td>
+					                    <td>
+					                    <div class="ui icon input">
+					                      <input id="timePicker24Hour" type="time" name="timePicker24Hour">
+					                      <i class="time Outline icon"></i>
+					                    </div>&nbsp;&nbsp;ถึง&nbsp;
 
-										<div class="ui icon input">
-											<input id="timePicker24Hour" type="time" name="timePicker24Hour">
-											<i class="time Outline icon"></i>
-										</div>
-										</td>
-									</tr>
-									<tr>
-									  <td>ห้องเรียน</td>
-									  <td><input type="text" name="name" value=""></td>
-									</tr>
-									<tr>
+					                    <div class="ui icon input">
+					                      <input id="timePicker24Hour" type="time" name="timePicker24Hour">
+					                      <i class="time Outline icon"></i>
+					                    </div>
+					                    </td>
+					                  </tr>
+					                  <tr>
+					                    <td>ห้องเรียน</td>
+					                    <td>
+					                        <div class="ui search">
+					                          <div class="ui left icon input">
+					                            <input class="prompt" type="text" name="id_class" placeholder="Search ID Class" style="width: 180px; ">
+					                            <i class="search icon"></i>
+					                          </div>
+					                        </div>
+					                    </td>
+					                  </tr>
+					                  <tr>
 										<td>อาคาร</td>
 										<td>
 											<select class="ui fluid dropdown">
