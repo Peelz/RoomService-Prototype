@@ -10,7 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	
-	
 	<!-- css -->
   	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
 
@@ -223,6 +222,9 @@ body{
 					                    <td><div class="ui icon input">
 					                      <input id="daterange" type="date" name="daterange" >
 					                      <i class="calendar Outline icon"></i>
+					                      <script>
+					                      	document.getElementById("daterange").valueAsDate = new Date()
+					                      </script>
 
 					                    </div></td>
 					                  </tr>
@@ -358,10 +360,14 @@ body{
 
 		</div>
 
-
+<div class="row">
+		<div class="col-3 col-m-3">
+		</div>
+		
 		</div>
 	</div>
 
+	
 		
 	
 <!-- ส่วนล่าง -->

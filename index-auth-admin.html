@@ -1,36 +1,36 @@
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
-	<link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
-	<link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel='stylesheet' href='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.css' />
+  <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
+  <link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel='stylesheet' href='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.css' />
   <!--dropdown-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
-	<script src="calendar-master/zabuto_calendar.min.js"></script>
-	<script src="css/semantic.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/custom/style.css">
 
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-	<script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
-	<script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+  <script src="css/semantic.min.js"></script>
 
-	  <!-- css -->
-  	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-	<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-	<script src="https://www.amcharts.com/lib/3/serial.js"></script>
-	<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-	<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-	<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-  <!-- ลองปฏิทิน -->
+  <!-- graph -->
+  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<!--   <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
+  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script> -->
+<!-- ลองปฏิทิน -->
   <meta charset="utf-8">
 
   <link rel="stylesheet" href="calendarjquerycss3/css/calendar.css" media="screen">
@@ -52,19 +52,12 @@
 
 <div class="aside"><h1>LAB SERVICE</h1></div><br>
 <!-- เมนูข้างๆ -->
-	<div class="row">
-		<div class="col-3 col-m-3 menu">
-			<ul>
-				<h4 class="ui left aligned header"><br>&nbsp;&nbsp;&nbsp;ยินดีต้อนรับเข้าสู่ระบบ..</h4>
-				<p class="ui left aligned text-align">&nbsp;&nbsp;&nbsp;Somsri</p>				
+  
+    <div class="col-3 col-m-3 menu">
+      <ul>
+        <h4 class="ui left aligned header"><br>&nbsp;&nbsp;&nbsp;ยินดีต้อนรับเข้าสู่ระบบ..</h4>
+        <p class="ui left aligned text-align">&nbsp;&nbsp;&nbsp;Somsri</p>        
 
-<!-- 					<div class="card">
-						  <div class="card-block">
-						    <h4 class="card-title">ยินดีต้อนรับเข้าสู่ระบบ ...</h4>
-						    <p class="card-text">Somsri</p>
-						  </div><br> 
-						  
-					<div>-->
           <li class="dropdown">
             <a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
           </li>
@@ -97,12 +90,13 @@
 
           <!--dropdown-->
           <script src="css/room.js"></script> 
-			</ul>
-		</div>
+      </ul>
+  </div>
+
 
 <!-- ปฎิทิน -->
- <div class="col-9 col-m-9">
-      <div class="container">
+  <div class="col-9 col-m-9">
+    <div class="container">
       <div class="ui grid">
         <div class="row">
           <div class="eight wide column">
@@ -215,83 +209,79 @@
           </div>
         </div>
     </div>
+  <!-- ประวัติการใช้งานห้อง -->
+  <br><div class="ui teal inverted segment">
+       
+        <div class="content">
+          <table class="ui striped table">
+            <h2 class="ui dividing header"><i class="history icon"></i>ข้อมูลการใช้ห้อง<a class="anchor" id="content"></a></h2>
+            <thead>
+              <tr>
+              <!-- <tr class="ui inverted grey table"> -->
+                <th>เวลา</th>
+                <th>ห้อง</th>
+                <th>อาคาร</th>
+                <th>อาจารย์ผู้สอน</th>
+              <th>รหัสวิชา</th>
+              <th>ชื่อวิชา</th>
+              <th>หมู่เรียน</th>
+              <th>หมายเหตุ</th>
+              </tr>
+            </thead>
+            <tbody >
+            <tr>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            <tr>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+              <td>Lorem ipsum dolor sit amet</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div><br>
 
 
+
+  <div class="row">
+    <div class="col-3 col-m-3">
     </div>
+    
   </div>
-
-<!-- ประวัติการใช้งานห้อง -->
-	<div class="row">
-		<div class="col-3 col-m-3">
-		</div>
-
-
-		<div class="col-9 col-m-9">
-		 <div class="ui teal inverted segment">
-			<div class="ui container">
-				<div class="content">
-					<table class="ui striped table">
-						<h2 class="ui dividing header"><i class="history icon"></i>ข้อมูลการใช้ห้อง<a class="anchor" id="content"></a></h2>
-					  <thead>
-					  	<tr>
-					    <!-- <tr class="ui inverted grey table"> -->
-					      <th>เวลา</th>
-					      <th>ห้อง</th>
-					      <th>อาคาร</th>
-					      <th>อาจารย์ผู้สอน</th>
-						  <th>รหัสวิชา</th>
-						  <th>ชื่อวิชา</th>
-						  <th>หมู่เรียน</th>
-						  <th>หมายเหตุ</th>
-					    </tr>
-					  </thead>
-					  <tbody >
-						<tr>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-						</tr>
-						<tr>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-						</tr>
-						<tr>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-							<td>Lorem ipsum dolor sit amet</td>
-						</tr>
-					  </tbody>
-					</table>
-				</div>
-				</div>
-			</div><br>
-
-	</div>
-	</div>
-
-		
-	
+</div>
+    
+  
 <!-- ส่วนล่าง -->
-	<div class="footer">
-	<p>Resize the browser window to see how the content respond to the resizing.</p>
-	</div>
+  <div class="footer">
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+  </div>
 
 </body>
 </html>
+
+
 
