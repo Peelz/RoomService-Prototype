@@ -89,6 +89,11 @@ var content = [
         margin-bottom: 0;
         float: left;
 }
+/*
+.ui-datepicker-calendar .ui-state-active {
+  color: #6a9113;
+  border-color: #6a9113;
+}*/
 
 #chartdiv {
   /*width   : 70%;*/

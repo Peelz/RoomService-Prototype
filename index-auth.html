@@ -27,12 +27,10 @@
   <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
   <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
   <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-<!--   <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
-  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script> -->
+  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
+  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script>
 <!-- ลองปฏิทิน -->
   <meta charset="utf-8">
-
-  <link rel="stylesheet" href="calendarjquerycss3/css/calendar.css" media="screen">
 
   <style type="text/css">
   body
@@ -90,21 +88,20 @@
         <div class="row">
           <div class="eight wide column">
             <div class="col-md-12" style="
-              padding-top: 0%;
-              padding-right: 0%;
-              padding-bottom: 0%;
-              padding-left: 0%;">
-            <!-- <img src="calendarjquerycss3/img/title.png" alt=""> -->
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-              <script src="calendarjquerycss3/js/jquery-ui-datepicker.min.js"></script>
-              <div id="calendar" style="width: 100%;height: 150%;"></div>
-              <script>
-                $('#calendar').datepicker({
-                inline: true,
-                firstDay: 1,
-                showOtherMonths: true,
-                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+                background-color: white;
+                width: 100%;
+                height: 100%;">
+              <div id='calendar'></div>
+              <script type="application/javascript">
+                $(document).ready(function() {
+             // page is now ready, initialize the calendar...
+                // options and github  - http://fullcalendar.io/
+                $('#calendar').fullCalendar({
+                  dayClick: function(date, jsEvent, view, resourceObj) {
+                  $(this).css('background-color', '#f29d1f');
+                  }
                 });
+              });
               </script>
 
                 <!-- <div class="footer"><p>By <a href="http://vtimbuc.net/">Valeriu Timbuc</a> for <a href="http://designmodo.com">DesignModo</a>.</p></div> -->
@@ -113,7 +110,8 @@
 
           <div class="seven wide column">
             <div class="ui teal inverted segment" style="
-              width   : 115%;">
+              width   : 115%;
+              height: 100%;">
               <div class="content">
               <h2 class="ui dividing header"><i class="bar chart icon"></i>ข้อมูลสถิติ<a class="anchor" id="content"></a></h2><br>
               </div>
