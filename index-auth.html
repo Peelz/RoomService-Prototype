@@ -43,7 +43,7 @@
     #wrapper{padding: 50px 0 0 325px;}
     #calendar{margin:0px auto; width: 100%;}
   </style>
-<meta name="robots" content="noindex,follow" />
+  <meta name="robots" content="noindex,follow" />
 
 <!-- จบ -->
 </head>
@@ -51,36 +51,35 @@
 
 <div class="aside"><h1>LAB SERVICE</h1></div><br>
 <!-- เมนูข้างๆ -->
-  
-    <div class="col-3 col-m-3 menu">
-      <ul>
-        <h4 class="ui left aligned header"><br>&nbsp;&nbsp;&nbsp;ยินดีต้อนรับเข้าสู่ระบบ..</h4>
-        <p class="ui left aligned text-align">&nbsp;&nbsp;&nbsp;Somsri</p>        
+  <div class="col-3 col-m-3 menu">
+    <ul>
+      <h4 class="ui left aligned header"><br>&nbsp;&nbsp;&nbsp;ยินดีต้อนรับเข้าสู่ระบบ..</h4>
+      <p class="ui left aligned text-align">&nbsp;&nbsp;&nbsp;Somsri</p>        
 
-          <li class="dropdown">
-            <a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
-          </li>
+      <li class="dropdown">
+      <a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
+      </li>
 
-          <li class="dropdown" >
-            <a href="#" data-toggle="dropdown"class="item "><i class="building icon"></i>ขอใช้ห้องแล็บ <i class="icon-arrow"></i></a>
-              <ul class="dropdown-menu">
-              <li><a href="room-request.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
-              <li><a href="edit.html"class="item "><i class="configure icon"></i>แก้ไขการจองห้อง</a></li>
-              <li><a href="edit.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li>
-              </ul>
-          </li>
-          
-          <li class="dropdown">
-              <a href="index-auth.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
-          </li>
+      <li class="dropdown">
+      <a href="#" data-toggle="dropdown"class="item "><i class="building icon"></i>ขอใช้ห้องแล็บ <i class="icon-arrow"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
+          <li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไขการจองห้อง</a></li>
+          <li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li>
+        </ul>
+      </li>
 
-            <li class="dropdown">
-            <a href="loginsuccessful.html" data-toggle="dropdown"class="item "><i class="sign out icon"></i>ออกจากระบบ </a>
-            </li>
+      <li class="dropdown">
+      <a href="index-auth-admin.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
+      </li>
+
+      <li class="dropdown">
+      <a href="loginsuccessful.html" data-toggle="dropdown"class="item "><i class="sign out icon"></i>ออกจากระบบ </a>
+      </li>
 
           <!--dropdown-->
-          <script src="css/room.js"></script> 
-      </ul>
+    <script src="css/room.js"></script> 
+    </ul>
   </div>
 
 
@@ -96,28 +95,28 @@
               padding-bottom: 0%;
               padding-left: 0%;">
             <!-- <img src="calendarjquerycss3/img/title.png" alt=""> -->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-                <script src="calendarjquerycss3/js/jquery-ui-datepicker.min.js"></script>
-                <div id="calendar" style="width: 100%;height: 150%;"></div>
-                  <script>
-                  $('#calendar').datepicker({
-                    inline: true,
-                    firstDay: 1,
-                    showOtherMonths: true,
-                    dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-                  });
-                </script>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+              <script src="calendarjquerycss3/js/jquery-ui-datepicker.min.js"></script>
+              <div id="calendar" style="width: 100%;height: 150%;"></div>
+              <script>
+                $('#calendar').datepicker({
+                inline: true,
+                firstDay: 1,
+                showOtherMonths: true,
+                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+                });
+              </script>
 
                 <!-- <div class="footer"><p>By <a href="http://vtimbuc.net/">Valeriu Timbuc</a> for <a href="http://designmodo.com">DesignModo</a>.</p></div> -->
+            </div>
+          </div>
 
-                            </div>
-                          </div>
-            <div class="seven wide column">
-              <div class="ui teal inverted segment" style="
+          <div class="seven wide column">
+            <div class="ui teal inverted segment" style="
               width   : 115%;">
-                <div class="content">
-                   <h2 class="ui dividing header"><i class="bar chart icon"></i>ข้อมูลสถิติ<a class="anchor" id="content"></a></h2><br>
-                </div>
+              <div class="content">
+              <h2 class="ui dividing header"><i class="bar chart icon"></i>ข้อมูลสถิติ<a class="anchor" id="content"></a></h2><br>
+              </div>
               <script>
               var chart = AmCharts.makeChart( "chartdiv", {
                 "type": "serial",
@@ -194,77 +193,75 @@
               } );
               </script>
               <div id="chartdiv"style="overflow: visible;text-align: left;background-color: white;"></div>
-              </div> 
-            </div>          
-          </div>
+            </div> 
+          </div>          
         </div>
+      </div>
     </div>
   <!-- ประวัติการใช้งานห้อง -->
-  <br><div class="ui teal inverted segment">
-       
-        <div class="content">
-          <table class="ui striped table">
-            <h2 class="ui dividing header"><i class="history icon"></i>ข้อมูลการใช้ห้อง<a class="anchor" id="content"></a></h2>
-            <thead>
-              <tr>
+    <br>
+    <div class="ui teal inverted segment">
+      <div class="content">
+        <table class="ui striped table">
+        <h2 class="ui dividing header"><i class="history icon"></i>ข้อมูลการใช้ห้อง<a class="anchor" id="content"></a></h2>
+        <thead>
+          <tr>
               <!-- <tr class="ui inverted grey table"> -->
-                <th>เวลา</th>
-                <th>ห้อง</th>
-                <th>อาคาร</th>
-                <th>อาจารย์ผู้สอน</th>
-              <th>รหัสวิชา</th>
-              <th>ชื่อวิชา</th>
-              <th>หมู่เรียน</th>
-              <th>หมายเหตุ</th>
-              </tr>
-            </thead>
-            <tbody >
-            <tr>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-            </tr>
-            <tr>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-            </tr>
-            <tr>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        </div>
-      </div><br>
+          <th>เวลา</th>
+          <th>ห้อง</th>
+          <th>อาคาร</th>
+          <th>อาจารย์ผู้สอน</th>
+          <th>รหัสวิชา</th>
+          <th>ชื่อวิชา</th>
+          <th>หมู่เรียน</th>
+          <th>หมายเหตุ</th>
+          </tr>
+          </thead>
 
+          <tbody >
+          <tr>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          </tr>
 
+          <tr>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          </tr>
+
+          <tr>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          <td>Lorem ipsum dolor sit amet</td>
+          </tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div><br>
 
   <div class="row">
     <div class="col-3 col-m-3">
-    </div>
-    
+    </div> 
   </div>
 </div>
     
-  
 <!-- ส่วนล่าง -->
   <div class="footer">
   <p>Resize the browser window to see how the content respond to the resizing.</p>
@@ -272,4 +269,6 @@
 
 </body>
 </html>
+
+
 
