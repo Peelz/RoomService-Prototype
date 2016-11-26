@@ -13,6 +13,23 @@
     background: #EEDD82;
 }
 
+.fc-scroller {
+  display: none;
+}
+/*.selected {
+  background-color: red;
+}*/
+/*
+
+
+/*.reset-this {
+    background-color : transparent;
+}*/
+
+/*.this{
+    background-color : #ffffff;
+}
+*/
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -97,7 +114,7 @@ var content = [
 
 #chartdiv {
   /*width   : 70%;*/
-  height    : 278px;
+  height    : 390px;
   font-size : 11px;
 } 
 
