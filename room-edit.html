@@ -174,86 +174,43 @@ body{
 					                    <td>รหัสวิชา</td>
 					                    <td>
 					                    <!-- <td><input type="text" name="name" value=""></td> -->
-					                       <div class="ui search" id="content">
-					                          <div class="ui left icon input">
+					                      <div class="ui disabled input">
 					                            <input  class="prompt" type="text" name="sec" placeholder="Search Subject"
-					                            style="width: 180px; ">
-					                            <i class="search icon"></i> 
-					                         
-										            <script>
-										            var content = [
-														{ title:'Seminar - 03603497' },
-														{ title:'Special Problems - 03603498' },
-														{ title:'Software Engineering - 03603341' },
-														{ title:'Network Programming - 03603423' }
-															];
-										                $('#content')
-															  .search({
-															    source: content
-													    });
-										             
-										            </script> 
-										    </div>
-											<div class="results"></div>
+					                            style="width: 180px; " value="03603423" >
+					          
 								        </div>
 					                    </td> 
 					                  </tr>
 					                  <tr>
 					                    <td>หมู่เรียน</td>
 					                    <td>
-					                        <div class="ui search"id="section">
-					                          <div class="ui left icon input">
+					                       <div class="ui disabled input">
+					                          
 					                            <input class="prompt" type="text" name="sec" placeholder="Search Sec"
-					                            style="width: 140px; ">
-					                            <i class="search icon"></i> 
-					                          <script>
-										            var section = [
-														{ title:'800' },
-														{ title:'801' },
-														{ title:'802' },
-														{ title:'803' }
-															];
-										                $('#section')
-															  .search({
-															    source: section
-													    });
-										             
-										            </script> 
-										    </div>
-											<div class="results"></div>
+					                            style="width: 140px; " value="800">
+					                            
 					                        </div>
 					                    </td>
 					                  </tr>
 					                  <tr>
 					                    <td>ผู้สอน</td>
 					                    <td>
-					                        <div class="ui search"id="teacher">
-					                          <div class="ui left icon input">
+					                        <div class="ui disabled input">
+					                          
 					                            <input class="prompt" type="text" name="instructor" placeholder="Search Instructor" 
-					                            style="width: 370px; ">
-					                            <i class="search icon"></i>
-					                           <script>
-										            var teacher = [
-														{ title:'วัลลภ อินทร์ฉ่ำ ' },
-														{ title:'สุวรา สุระประเสริฐ ' },
-														{ title:'ปุณณะ ยศปัญญา ' },
-														{ title:'เจริญ วงษ์ชุ่มเย็น ' }
-															];
-										                $('#teacher')
-															  .search({
-															    source: teacher
-													    });
-										             
-										            </script> 
-										    </div>
-											<div class="results"></div>
+					                            style="width: 370px; " value="วัลลภ อินทร์ฉ่ำ ">
+					                            
 					                        </div>
 					                    </td>
 					                  </tr>
 					                  <tr>
 					                    <td>จำนวนนิสิต</td>
-					                    <td><div class="ui right labeled input">
-					                          <input type="text" placeholder="">
+					                    <td>
+					                    <div class="ui right labeled input">
+					                    	<div class="ui disabled input">
+
+					                          <input type="text" placeholder="" value="40">
+					                          </div>
 					                          <div class="ui label">
 					                            คน
 					                          </div>
@@ -288,32 +245,17 @@ body{
 					                  <tr>
 					                    <td>ห้องเรียน</td>
 					                    <td>
-					                        <div class="ui search"id="room">
-					                          <div class="ui left icon input">
-					                            <input class="prompt" type="text" name="id_class" placeholder="Search ID Class" style="width: 180px; ">
-					                            <i class="search icon"></i>
-					                             <script>
-										            var room = [
-														{ title:'15309' },
-														{ title:'153010' },
-														{ title:'153011' },
-														{ title:'153012' }
-															];
-										                $('#room')
-															  .search({
-															    source: room
-													    });
-										             
-										            </script> 
-										    </div>
-											<div class="results"></div>
+					                        <div class="ui disabled input">
+					                         
+					                            <input class="prompt" type="text" name="id_class" placeholder="Search ID Class" style="width: 180px; " value="15309">
+					                           
 					                        </div>
 					                    </td>
 					                  </tr>
 					                  <tr>
 										<td>อาคาร</td>
 										<td>
-											<select class="ui fluid dropdown">
+											<select class="ui disabled fluid dropdown">
 												<option value="1">1</option>
 												<option value="2">2</option>
 												<option value="3">3</option>
