@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
 	<link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	
 	<!--dropdown-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   	<link rel="stylesheet" href="css/style.css">
+	
 	
 	<!-- css -->
   	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
@@ -123,7 +121,7 @@ body{
 </head>
 <body>
 
-<div class="aside"><h1><a href="index-auth.html">LAB SERVICE</a></h1></div><br>	
+<div class="aside"><h1>LAB SERVICE</h1></div><br>	
 <!-- ส่วนเมนูข้างๆ -->
 	<div class="row">
 		<div class="col-3 col-m-3 menu">
@@ -137,22 +135,31 @@ body{
 						  </div><br>
 						  
 					<div> -->
-<!-- 				<li class="dropdown">
+				<li class="dropdown">
 				<a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
-				</li> -->
+				</li>
 
 				<li class="dropdown">
 				<a href="#" data-toggle="dropdown"class="item "><i class="building icon"></i>ขอใช้ห้องแล็บ <i class="icon-arrow"></i></a>
 					<ul class="dropdown-menu">
-					<li><a href="room-request.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
-					<li><a href="edit.html"class="item "><i class="configure icon"></i>แก้ไข/ยกเลิก การจองห้อง</a></li>
-<!-- 					<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li> -->
+					<li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
+					<li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไขการจองห้อง</a></li>
+					<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li>
 					</ul>
 				</li>
 
-<!-- 				<li class="dropdown">
-				<a href="index-auth.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
-				</li> -->
+				<li class="dropdown">
+				<a href="#" data-toggle="dropdown"class="item "><i class="add circle icon"></i>เพิ่มห้องแล็บ<i class="icon-arrow"></i></a>
+					<ul class="dropdown-menu">
+					<li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>เพิ่มห้องแล็บ</a></li>
+					<li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไขการเพิ่มห้อง</a></li>
+					<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการเพิ่มห้อง</a></li>
+					   </ul>
+				</li>
+
+				<li class="dropdown">
+				<a href="index-auth-admin.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
+				</li>
 
 				<li class="dropdown">
 				<a href="loginsuccessful.html" data-toggle="dropdown"class="item "><i class="sign out icon"></i>ออกจากระบบ </a>
@@ -168,15 +175,33 @@ body{
 			<div class="ui container">
 				<div class="content" >
 					<div class="ui segment">
-						<form action="" class="ui form">
-							<h2 class="ui header"><i class="building icon"></i>ขอใช้ห้องแล็บ</h2>
+						<div class="ui error message">
+						
+							  <i class="close icon"></i>
+							  <div class="header">
+							    การขอใช้ห้องแล็บผิดพลาด
+							  </div>
+							  <ul class="list">
+							    <li>รหัสวิชาไม่ถูกต้อง.</li>
+							    <li>หมู่เรียนไม่ถูกต้อง.</li>
+							    <li>ผู้สอน.</li>
+							    <li>จำนวนนิสิต.</li>
+							    <li>วันที่.</li>
+							    <li>เวลา.</li>
+							    <li>ห้องเรียน.</li>
+							    <li>อาคาร.</li>
+							    <li>หมายเหตุ.</li>
+							  </ul>
+							</div>
+							<form action="" class="ui form">
+							<h2 class="ui header"><i class="configure icon"></i>แก้ไขการขอใช้ห้องแล็บ</h2>
 							<table class="ui definition table" >
 							  	<tbody >
 					                  <tr>
 					                    <td>รหัสวิชา</td>
 					                    <td>
-					                    <!-- <td><input type="text" name="name" value=""></td> -->
-					                         <div class="ui search" id="content">
+					                    
+					                        <div class="ui search" id="content">
 					                          <div class="ui left icon input">
 					                            <input  class="prompt" type="text" name="sec" placeholder="Search Subject"
 					                            style="width: 180px; ">
@@ -257,7 +282,7 @@ body{
 					                    <td><div class="ui right labeled input">
 					                          <input type="text" placeholder="">
 					                          <div class="ui label">
-					                            คน
+					                            คน			   
 					                          </div>
 					                        </div>
 					                    </td>
@@ -331,90 +356,18 @@ body{
 
 								</tbody>
 							</table>
-							<button class="ui button" type="submit">ตรวจสอบ</button>
+							<button class="ui button" type="submit">บันทึก</button>
 							<button type="button" class="ui button" name="button">ค่าเริ่มต้น</button>
 
 						</form>
-						<br><br><br><br>
 
-						<div class="ui grid">
-							<div class="row">
-								<div class="one wide column">
-								</div>
-		  						<div class="two wide column">
-									<p>อุปกรณ์พื้นฐาน : </p<br><br><br><br><br><br><br><br><br><p>อุปกรณ์อื่นๆ : </p>
-								</div>
-								<div class="five wide column">
-									<div class="ui checkbox">
-									  <input type="checkbox">
-									  <label>เครื่องคอมพิวเตอร์</label>
-									</div><br><br>
-									<div class="ui checkbox">
-									  <input type="checkbox">
-									  <label>ไมโครโฟนแบบมีสาย</label>
-									</div><br><br>
-									<div class="ui checkbox">
-									  <input type="checkbox">
-									  <label>จอรับภาพ</label>
-									</div><br><br>
-									<div class="ui checkbox">
-									  <input type="checkbox">
-									  <label>สายต่อ Notebook-LCD</label>
-									</div><br><br><br>
-									<div class="ui checkbox">
-									  <input type="checkbox">
-									  <label>ไมโครโฟนไร้สายแบบมือถือ</label>
-									</div>
-								</div>
-								<div class="five wide column">
-									<div class="ui checkbox">
-									  <input type="checkbox">
-									  <label>เครื่องฉายภาพ LCD</label>
-									</div><br><br>
-									<div class="ui checkbox">
-									  <input type="checkbox">
-									  <label>เครื่องนำเสนอภาพโปร่งแสง - ทึบแสง</label>
-									</div><br><br>
-									<div class="ui checkbox">
-									  <input type="checkbox">
-									  <label>เครื่องขยายเสียงพร้อมไมโครโฟน</label>
-									</div><br><br>
-								</div>
-								<!-- <div class="four wide column">
-									<div class="ui checkbox">
-									  <input type="checkbox">
-									  <label>Indeterminate</label>
-									</div>
-								</div> -->
-							</div>
-						</div>
+						<div class="timerror">
+					     	<p>วันที่และเวลาซ้ำซ้อน.</p>
+					   </div>
+						
 
-						<div class="ui grid">
-							<div class="row">
-								<div class="one wide column">
-								</div>
-			  					<div class="two wide column">
-			  						<p>หมายเหตุ : </p>
-			  					</div>
-			  					<div class="nine wide column">
-			  						<div class="ui form">
-									  <div class="field">
-									    <!-- <label>User Input</label> -->
-									    <textarea rows="2"></textarea>
-									    <!-- <input type="text"> -->
-									  </div>
-									</div>
-			  					</div>
-			  					<!-- <div class="nine wide column">
-			  					</div> -->
-
-							</div>
-						</div>
-						<br>
-						<button class="ui button" type="submit">ตกลง</button>
-						<button type="button" class="ui button" name="button">ล้างข้อความ</button>
 					</div>
-			</div>	
+			</div>			
 		</div>
 	</div>
 </div>

@@ -19,6 +19,8 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
 	<script src="calendar-master/zabuto_calendar.min.js"></script>
+	<!--search-->
+	<script src="css/semantic.min.js"></script>
 	
 <!-- <style>
 * {
@@ -119,7 +121,7 @@ body{
 </head>
 <body>
 
-<div class="aside"><h1>LAB SERVICE</h1></div><br>	
+<div class="aside"><h1><a href="index-auth-admin.html">LAB SERVICE</a></h1></div><br>	
 <!-- ส่วนเมนูข้างๆ -->
 	<div class="row">
 		<div class="col-3 col-m-3 menu">
@@ -133,31 +135,31 @@ body{
 						  </div><br>
 						  
 					<div> -->
-				<li class="dropdown">
+<!-- 				<li class="dropdown">
 				<a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
-				</li>
+				</li> -->
 
 				<li class="dropdown">
 				<a href="#" data-toggle="dropdown"class="item "><i class="building icon"></i>ขอใช้ห้องแล็บ <i class="icon-arrow"></i></a>
 					<ul class="dropdown-menu">
 					<li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
-					<li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไขการจองห้อง</a></li>
-					<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li>
+					<li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไข/ยกเลิก การจองห้อง</a></li>
+<!-- 					<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li> -->
 					</ul>
 				</li>
 
 				<li class="dropdown">
 				<a href="#" data-toggle="dropdown"class="item "><i class="add circle icon"></i>เพิ่มห้องแล็บ<i class="icon-arrow"></i></a>
 					<ul class="dropdown-menu">
-					<li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>เพิ่มห้องแล็บ</a></li>
-					<li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไขการเพิ่มห้อง</a></li>
-					<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการเพิ่มห้อง</a></li>
-					   </ul>
+					<li><a href="admin-add-lab.html"class="item "><i class="pointing up icon"></i>เพิ่มห้องแล็บ</a></li>
+					<li><a href="admin-edit-lab.html"class="item "><i class="configure icon"></i>แก้ไขการเพิ่มห้อง</a></li>
+<!-- 					<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการเพิ่มห้อง</a></li> -->
+					  </ul>
 				</li>
 
-				<li class="dropdown">
+<!-- 				<li class="dropdown">
 				<a href="index-auth-admin.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
-				</li>
+				</li> -->
 
 				<li class="dropdown">
 				<a href="loginsuccessful.html" data-toggle="dropdown"class="item "><i class="sign out icon"></i>ออกจากระบบ </a>
@@ -181,39 +183,79 @@ body{
 					                    <td>รหัสวิชา</td>
 					                    <td>
 					                    <!-- <td><input type="text" name="name" value=""></td> -->
-					                        <div class="ui category search">
+					                        <div class="ui search" id="content">
 					                          <div class="ui left icon input">
-					                            <input class="prompt" type="text" name="id_sub" placeholder="Search ID Subject" style="width: 180px; ">
-					                            <i class="search icon"></i>
-					                          </div>
-					                          <div class="results"></div>
-					                          
-					                        </div>
+					                            <input  class="prompt" type="text" name="sec" placeholder="Search Subject"
+					                            style="width: 180px; ">
+					                            <i class="search icon"></i> 
+					                         
+										            <script>
+										            var content = [
+														{ title:'Seminar - 03603497' },
+														{ title:'Special Problems - 03603498' },
+														{ title:'Software Engineering - 03603341' },
+														{ title:'Network Programming - 03603423' }
+															];
+										                $('#content')
+															  .search({
+															    source: content
+													    });
+										             
+										            </script> 
+										    </div>
+											<div class="results"></div>
+								        </div>
 					                    </td> 
 					                  </tr>
 					                  <tr>
 					                    <td>หมู่เรียน</td>
 					                    <td>
-					                        <div class="ui search">
+					                        <div class="ui search"id="section">
 					                          <div class="ui left icon input">
 					                            <input class="prompt" type="text" name="sec" placeholder="Search Sec"
 					                            style="width: 140px; ">
 					                            <i class="search icon"></i> 
-					                          </div>
-					                          <div class="results"></div>
+					                          <script>
+										            var section = [
+														{ title:'800' },
+														{ title:'801' },
+														{ title:'802' },
+														{ title:'803' }
+															];
+										                $('#section')
+															  .search({
+															    source: section
+													    });
+										             
+										            </script> 
+										    </div>
+											<div class="results"></div>
 					                        </div>
 					                    </td>
 					                  </tr>
 					                  <tr>
 					                    <td>ผู้สอน</td>
 					                    <td>
-					                        <div class="ui search">
+					                        <div class="ui search"id="teacher">
 					                          <div class="ui left icon input">
 					                            <input class="prompt" type="text" name="instructor" placeholder="Search Instructor" 
 					                            style="width: 370px; ">
 					                            <i class="search icon"></i>
-					                          </div>
-					                          <div class="results"></div>
+					                           <script>
+										            var teacher = [
+														{ title:'วัลลภ อินทร์ฉ่ำ ' },
+														{ title:'สุวรา สุระประเสริฐ ' },
+														{ title:'ปุณณะ ยศปัญญา ' },
+														{ title:'เจริญ วงษ์ชุ่มเย็น ' }
+															];
+										                $('#teacher')
+															  .search({
+															    source: teacher
+													    });
+										             
+										            </script> 
+										    </div>
+											<div class="results"></div>
 					                        </div>
 					                    </td>
 					                  </tr>
@@ -255,12 +297,25 @@ body{
 					                  <tr>
 					                    <td>ห้องเรียน</td>
 					                    <td>
-					                        <div class="ui search">
+					                        <div class="ui search"id="room">
 					                          <div class="ui left icon input">
 					                            <input class="prompt" type="text" name="id_class" placeholder="Search ID Class" style="width: 180px; ">
 					                            <i class="search icon"></i>
-					                          </div>
-					                          <div class="results"></div>
+					                             <script>
+										            var room = [
+														{ title:'15309' },
+														{ title:'153010' },
+														{ title:'153011' },
+														{ title:'153012' }
+															];
+										                $('#room')
+															  .search({
+															    source: room
+													    });
+										             
+										            </script> 
+										    </div>
+											<div class="results"></div>
 					                        </div>
 					                    </td>
 					                  </tr>

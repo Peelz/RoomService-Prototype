@@ -49,38 +49,38 @@
 </head>
 <body>
 
-<div class="aside"><h1>LAB SERVICE</h1></div><br>
+<div class="aside"><h1><a href="index-auth-admin.html">LAB SERVICE</a></h1></div><br>
 <!-- เมนูข้างๆ -->
   <div class="col-3 col-m-3 menu">
     <ul>
       <h4 class="ui left aligned header"><br>&nbsp;&nbsp;&nbsp;ยินดีต้อนรับเข้าสู่ระบบ..</h4>
       <p class="ui left aligned text-align">&nbsp;&nbsp;&nbsp;Somsri</p>        
 
-      <li class="dropdown">
+<!--       <li class="dropdown">
       <a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
-      </li>
+      </li> -->
 
       <li class="dropdown">
       <a href="#" data-toggle="dropdown"class="item "><i class="building icon"></i>ขอใช้ห้องแล็บ <i class="icon-arrow"></i></a>
         <ul class="dropdown-menu">
           <li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
-          <li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไขการจองห้อง</a></li>
-          <li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li>
+          <li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไข/ยกเลิก การจองห้อง</a></li>
+          <!-- <li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li> -->
         </ul>
       </li>
 
       <li class="dropdown">
       <a href="#" data-toggle="dropdown"class="item "><i class="add circle icon"></i>เพิ่มห้องแล็บ<i class="icon-arrow"></i></a>
         <ul class="dropdown-menu">
-          <li><a href="#"class="item "><i class="pointing up icon"></i>เพิ่มห้องแล็บ</a></li>
-          <li><a href="#"class="item "><i class="configure icon"></i>แก้ไขการเพิ่มห้อง</a></li>
-          <li><a href="#"class="item "><i class="remove circle icon"></i>ยกเลิกการเพิ่มห้อง</a></li>
+          <li><a href="admin-add-lab.html"class="item "><i class="pointing up icon"></i>เพิ่มห้องแล็บ</a></li>
+          <li><a href="admin-edit-lab.html"class="item "><i class="configure icon"></i>แก้ไขการเพิ่มห้อง</a></li>
+          <!-- <li><a href="#"class="item "><i class="remove circle icon"></i>ยกเลิกการเพิ่มห้อง</a></li> -->
         </ul>
       </li>
 
-      <li class="dropdown">
+<!--       <li class="dropdown">
       <a href="index-auth-admin.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
-      </li>
+      </li> -->
 
       <li class="dropdown">
       <a href="loginsuccessful.html" data-toggle="dropdown"class="item "><i class="sign out icon"></i>ออกจากระบบ </a>
@@ -135,44 +135,23 @@
                   "type": "serial",
                   "theme": "light",
                   "dataProvider": [ {
-                    "country": "USA",
-                    "visits": 2025
+                    "room": "15202",
+                    "visits": 10
                   }, {
-                    "country": "China",
-                    "visits": 1882
+                    "room": "15301",
+                    "visits": 8
                   }, {
-                    "country": "Japan",
-                    "visits": 1809
+                    "room": "15401",
+                    "visits": 5
                   }, {
-                    "country": "Germany",
-                    "visits": 1322
+                    "room": "15204",
+                    "visits": 2
                   }, {
-                    "country": "UK",
-                    "visits": 1122
+                    "room": "15302",
+                    "visits": 7
                   }, {
-                    "country": "France",
-                    "visits": 1114
-                  }, {
-                    "country": "India",
-                    "visits": 984
-                  }, {
-                    "country": "Spain",
-                    "visits": 711
-                  }, {
-                    "country": "Netherlands",
-                    "visits": 665
-                  }, {
-                    "country": "Russia",
-                    "visits": 580
-                  }, {
-                    "country": "South Korea",
-                    "visits": 443
-                  }, {
-                    "country": "Canada",
-                    "visits": 441
-                  }, {
-                    "country": "Brazil",
-                    "visits": 395
+                    "room": "15402",
+                    "visits": 4
                   } ],
                   "valueAxes": [ {
                     "gridColor": "#FFFFFF",
@@ -193,7 +172,7 @@
                     "cursorAlpha": 0,
                     "zoomable": false
                   },
-                  "categoryField": "country",
+                  "categoryField": "room",
                   "categoryAxis": {
                     "gridPosition": "start",
                     "gridAlpha": 0,
@@ -233,37 +212,52 @@
 
           <tbody >
           <tr>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
+          <td>09:00 - 10:00</td>
+          <td>15308</td>
+          <td>15</td>
+          <td>อาจารย์วัลลภ อินทร์ฉ่ำ</td>
+          <td>0322154</td>
+          <td>Network programming</td>
+          <td>800</td>
+          <td>-</td>
           </tr>
 
           <tr>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
+          <td>13:00 - 15:00</td>
+          <td>15207</td>
+          <td>15</td>
+          <td>อาจารย์ปุณณะ ยศปัญญา</td>
+          <td>0321124</td>
+          <td>Seminar</td>
+          <td>801</td>
+          <td>-</td>
           </tr>
 
           <tr>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
-          <td>Lorem ipsum dolor sit amet</td>
+          <td>16:00 - 20:00</td>
+          <td>2208</td>
+          <td>2</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>ติววิชา Network</td>
           </tr></tbody>
+          <tfoot>
+          <tr><th colspan="8">
+            <div class="ui right floated pagination menu">
+              <a class="icon item">
+                <i class="left chevron icon"></i>
+              </a>
+              <a class="item">1</a>
+              <a class="item">2</a>
+              <a class="item">3</a>
+              <a class="icon item">
+                <i class="right chevron icon"></i>
+              </a>
+            </div>
+          </th>
+          </tr></tfoot>
         </table>
       </div>
     </div>

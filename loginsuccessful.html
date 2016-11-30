@@ -47,7 +47,7 @@
 <body>
 
   
-<div class="aside"><h1>LAB SERVICE</h1></div>
+<div class="aside"><h1><a href="loginsuccessful.html">LAB SERVICE</a></h1></div>
   <!-- เมนูข้างๆ -->
 <div class="row">
   <div class="col-3 col-m-3 menu">
@@ -61,6 +61,7 @@
             <label><h5>Remember me</h5></label>
           </div>
           <button class="ui green button"><a href="index-auth.html"style="color: white";>LOGIN</a></button>
+          <h4><a href="loginsuccessful.html">ลืมรหัสผ่าน</a></h4>
         </div>    
       </form>
     </ul>
@@ -99,7 +100,7 @@
           <div class="seven wide column">
               <div class="ui teal inverted segment" style="
               width   : 115%;
-              height : 99%;">
+              height: 99%;">
                 <div class="content">
                 <h2 class="ui dividing header"><i class="bar chart icon"></i>ข้อมูลสถิติ<a class="anchor" id="content"></a></h2><br>
                 </div>
@@ -108,44 +109,23 @@
                   "type": "serial",
                   "theme": "light",
                   "dataProvider": [ {
-                    "country": "USA",
-                    "visits": 2025
+                    "room": "15202",
+                    "visits": 10
                   }, {
-                    "country": "China",
-                    "visits": 1882
+                    "room": "15301",
+                    "visits": 8
                   }, {
-                    "country": "Japan",
-                    "visits": 1809
+                    "room": "15401",
+                    "visits": 5
                   }, {
-                    "country": "Germany",
-                    "visits": 1322
+                    "room": "15204",
+                    "visits": 2
                   }, {
-                    "country": "UK",
-                    "visits": 1122
+                    "room": "15302",
+                    "visits": 7
                   }, {
-                    "country": "France",
-                    "visits": 1114
-                  }, {
-                    "country": "India",
-                    "visits": 984
-                  }, {
-                    "country": "Spain",
-                    "visits": 711
-                  }, {
-                    "country": "Netherlands",
-                    "visits": 665
-                  }, {
-                    "country": "Russia",
-                    "visits": 580
-                  }, {
-                    "country": "South Korea",
-                    "visits": 443
-                  }, {
-                    "country": "Canada",
-                    "visits": 441
-                  }, {
-                    "country": "Brazil",
-                    "visits": 395
+                    "room": "15402",
+                    "visits": 4
                   } ],
                   "valueAxes": [ {
                     "gridColor": "#FFFFFF",
@@ -166,7 +146,7 @@
                     "cursorAlpha": 0,
                     "zoomable": false
                   },
-                  "categoryField": "country",
+                  "categoryField": "room",
                   "categoryAxis": {
                     "gridPosition": "start",
                     "gridAlpha": 0,
@@ -199,52 +179,70 @@
         <div class="content">
           <table class="ui striped table">
             <h2 class="ui dividing header"><i class="history icon"></i>ข้อมูลการใช้ห้อง<a class="anchor" id="content"></a></h2>
-            <thead>
-              <tr>
-              <!-- <tr class="ui inverted grey table"> -->
+              <thead>
+                <tr>
+                    <!-- <tr class="ui inverted grey table"> -->
                 <th>เวลา</th>
                 <th>ห้อง</th>
                 <th>อาคาร</th>
                 <th>อาจารย์ผู้สอน</th>
-              <th>รหัสวิชา</th>
-              <th>ชื่อวิชา</th>
-              <th>หมู่เรียน</th>
-              <th>หมายเหตุ</th>
-              </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-            </tr>
-            <tr>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-            </tr>
-            <tr>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-            </tr>
+                <th>รหัสวิชา</th>
+                <th>ชื่อวิชา</th>
+                <th>หมู่เรียน</th>
+                <th>หมายเหตุ</th>
+                </tr>
+                </thead>
+
+                <tbody >
+                <tr>
+                <td>09:00 - 10:00</td>
+                <td>15308</td>
+                <td>15</td>
+                <td>อาจารย์วัลลภ อินทร์ฉ่ำ</td>
+                <td>0322154</td>
+                <td>Network programming</td>
+                <td>800</td>
+                <td>-</td>
+                </tr>
+
+                <tr>
+                <td>13:00 - 15:00</td>
+                <td>15207</td>
+                <td>15</td>
+                <td>อาจารย์ปุณณะ ยศปัญญา</td>
+                <td>0321124</td>
+                <td>Seminar</td>
+                <td>801</td>
+                <td>-</td>
+                </tr>
+
+                <tr>
+                <td>16:00 - 20:00</td>
+                <td>2208</td>
+                <td>2</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>ติววิชา Network</td>
+                </tr></tbody>
             </tbody>
-          </table>
+            <tfoot>
+            <tr><th colspan="8">
+              <div class="ui right floated pagination menu">
+                <a class="icon item">
+                  <i class="left chevron icon"></i>
+                </a>
+                <a class="item">1</a>
+                <a class="item">2</a>
+                <a class="item">3</a>
+                <a class="icon item">
+                  <i class="right chevron icon"></i>
+                </a>
+              </div>
+            </th>
+            </tr></tfoot>
+            </table>
         </div>
         </div>
       </div><br>

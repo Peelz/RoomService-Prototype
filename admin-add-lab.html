@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+	<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
+	<link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!--dropdown-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  	<link rel="stylesheet" href="css/style.css">
+	
+	
+	
+	<!-- css -->
+  	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+	<script src="calendar-master/zabuto_calendar.min.js"></script>
+	
+<!-- <style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+h1 {
+   /* background-color: #2F4F4F;*/
+    color: #ffffff;
+   /* padding: 15px;*/
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#ffffff;
+    color: #000000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.aside {
+    background-color: #003333;
+    padding: 15px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer {
+    background-color: #2F4F4F;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+.ui.dividing.header .icon {
+   			margin-bottom: 0;
+    		float: left;
+}
+
+body{
+	background-color: #2E8B57;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+</style> -->
+</head>
+<body>
+
+<div class="aside"><h1><a href="index-auth-admin.html">LAB SERVICE</a></h1></div><br>	
+<!-- ส่วนเมนูข้างๆ -->
+	<div class="row">
+		<div class="col-3 col-m-3 menu">
+			<ul>
+			<h4 class="ui left aligned header"><br>&nbsp;&nbsp;&nbsp;ยินดีต้อนรับเข้าสู่ระบบ..</h4>
+			<p class="ui left aligned text-align">&nbsp;&nbsp;&nbsp;Somsri</p>
+					<!-- <div class="card">
+						  <div class="card-block">
+						    <h4 class="card-title">ยินดีต้อนรับเข้าสู่ระบบ ...</h4>
+						    <p class="card-text">Somsri</p>
+						  </div><br>
+						  
+					<div> -->
+<!-- 				<li class="dropdown">
+				<a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
+				</li> -->
+
+				<li class="dropdown">
+				<a href="#" data-toggle="dropdown"class="item "><i class="building icon"></i>ขอใช้ห้องแล็บ <i class="icon-arrow"></i></a>
+					<ul class="dropdown-menu">
+					<li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
+					<li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไข/ยกเลิก การจองห้อง</a></li>
+<!-- 					<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li> -->
+					</ul>
+				</li>
+
+				<li class="dropdown">
+				<a href="#" data-toggle="dropdown"class="item "><i class="add circle icon"></i>เพิ่มห้องแล็บ<i class="icon-arrow"></i></a>
+					<ul class="dropdown-menu">
+					<li><a href="admin-add-lab.html"class="item "><i class="pointing up icon"></i>เพิ่มห้องแล็บ</a></li>
+					<li><a href="admin-edit-lab.html"class="item "><i class="configure icon"></i>แก้ไขการเพิ่มห้อง</a></li>
+<!-- 					<li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการเพิ่มห้อง</a></li> -->
+					   </ul>
+				</li>
+
+<!-- 				<li class="dropdown">
+				<a href="index-auth-admin.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
+				</li> -->
+
+				<li class="dropdown">
+				<a href="loginsuccessful.html" data-toggle="dropdown"class="item "><i class="sign out icon"></i>ออกจากระบบ </a>
+				</li>
+
+					<!--dropdown-->
+				<script src="css/room.js"></script>	
+			</ul>
+		</div>
+
+<!-- ส่วนขอใช้งาน -->
+		<div class="col-9 col-m-9">
+			<div class="ui container">
+				<div class="content" >
+					<div class="ui segment">
+						<form action="" class="ui form">
+							<h2 class="ui header"><i class="add circle icon"></i>เพิ่มห้องแล็บ</h2>
+							<table class="ui definition table" >
+							  	<tbody >
+					                  <tr>
+					                    <td>ชื่อห้อง</td>
+					                    <td>
+					                        <div class="ui input">
+					                        	<input type="text">
+					                        </div>
+					                    </td> 
+					                  </tr>
+					                  <tr>
+					                    <td>เลขห้อง</td>
+					                    <td>
+					                        <div class="ui input">
+					                        	<input type="text">
+					                          <!-- <div class="ui left icon input">
+					                            <input class="prompt" type="text" name="sec" placeholder="Search Sec"
+					                            style="width: 140px; ">
+					                            <i class="search icon"></i> 
+					                          </div> -->
+					                        </div>
+					                    </td>
+					                  </tr>
+					                  <tr>
+					                    <td>อาคาร</td>
+					                    <td>
+					                        <div class="ui input">
+					                        	<input type="text">
+					                        </div>
+					                    </td>
+					                  </tr>
+								</tbody>
+							</table>
+							<button class="ui button" type="submit">ตกลง</button>
+							<button type="button" class="ui button" name="button">ล้างข้อความ</button>
+						</form>
+					</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- ส่วนล่าง -->
+	<div class="footer">
+	<p>Resize the browser window to see how the content respond to the resizing.</p>
+	</div>
+
+</body>
+</html>

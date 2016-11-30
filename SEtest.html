@@ -3,258 +3,412 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 
   <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="css/components/sidebar.min.css">
   <link rel="stylesheet" type="text/css" href="calendar-master/zabuto_calendar.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel='stylesheet' href='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.css' />
-
+  
+  <!--dropdown-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  
   <!-- css -->
-  <link rel="stylesheet" type="text/css" href="css/custom/style.css">
+    <link rel="stylesheet" type="text/css" href="css/custom/style.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
-  <script src="css/semantic.min.js"></script>
+  <script src="calendar-master/zabuto_calendar.min.js"></script>
+  
+<!-- <style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+h1 {
+   /* background-color: #2F4F4F;*/
+    color: #ffffff;
+   /* padding: 15px;*/
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#ffffff;
+    color: #000000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.aside {
+    background-color: #003333;
+    padding: 15px;
+    color: #ffffff;
+    text-align: left;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer {
+    background-color: #2F4F4F;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
 
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+.ui.dividing.header .icon {
+        margin-bottom: 0;
+        float: left;
+}
 
-  <!-- graph -->
-  <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
-  <script src="https://www.amcharts.com/lib/3/serial.js"></script>
-  <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
-  <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
-  <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
-  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/lib/moment.min.js'></script>
-  <script src='http://fullcalendar.io/js/fullcalendar-2.2.3/fullcalendar.min.js'></script>
-<!-- ลองปฏิทิน -->
-  <meta charset="utf-8">
-<!-- 
-  <link rel="stylesheet" href="calendarjquerycss3/css/calendar.css" media="screen"> -->
+body{
+  background-color: #2E8B57;
+}
 
-  <style type="text/css">
-  body
-  /*{width:960px;margin:0 auto}*/
-/*  .footer{margin-top:100px;
-    text-align:center;color:#666;
-    font:bold 14px Arial}*/
-    #wrapper{padding: 50px 0 0 325px;}
-    #calendar{margin:0px auto; width: 100%;}
-  </style>
-  <meta name="robots" content="noindex,follow" />
-
-<!-- จบ -->
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+</style> -->
 </head>
 <body>
 
-<div class="aside"><h1>LAB SERVICE</h1></div>
-<div class="row">
-  <div class="col-3 col-m-3 menu">
-    <ul>
-      <form action="" class="ui form">
-        <div class="field"><label for=""><br>ID :</label><input type="text"></div>
-        <div class="field"><label for="">Password :</label><input type="Password"></div>
-          <div class="inline field">
-            <div class="ui checkbox">
-              <input type="checkbox" tabindex="0">
-              <label><h5>Remember me</h5></label>
-            </div>
-            <input type="button" value="LOGIN" class="ui green button"onclick="loginfail()" />
-              <script>
-                function loginfail() {
-                document.getElementById('login').style.display ="block";
-                }
-              </script>
+<div class="aside"><h1>LAB SERVICE</h1></div><br> 
+<!-- ส่วนเมนูข้างๆ -->
+  <div class="row">
+    <div class="col-3 col-m-3 menu">
+      <ul>
+      <h4 class="ui left aligned header"><br>&nbsp;&nbsp;&nbsp;ยินดีต้อนรับเข้าสู่ระบบ..</h4>
+      <p class="ui left aligned text-align">&nbsp;&nbsp;&nbsp;Somsri</p>
+          <!-- <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">ยินดีต้อนรับเข้าสู่ระบบ ...</h4>
+                <p class="card-text">Somsri</p>
+              </div><br>
+              
+          <div> -->
+        <li class="dropdown">
+        <a href="#" data-toggle="dropdown"class="item "><i class="write icon"></i>แก้ไขข้อมูลส่วนตัว</a>
+        </li>
 
-            <div id="login" style="display:none;"><font color="red"> Incorrect ID/Password. Please try again.</font></div>
-          </div>    
-      </form>
-    </ul>
-  </div>
-   <div class="col-9 col-m-9">
-    <div class="container">
-      <div class="ui grid">
-        <div class="row">
-          <div class="eight wide column">
-            <div class="col-md-12" style="
-                background-color: white;
-                width: 100%;
-                height: 99%;">
-              <div id='calendar'></div>
-              <script type="application/javascript">
-                var current = $('fc-today');
-                // current.addClass(selected);
-             // page is now ready, initialize the calendar...
-                // options and github  - http://fullcalendar.io/
-                $('#calendar').fullCalendar({
-                  
-                  dayClick: function(day,month,year) {
-                    $(this).addClass("fc-today");
-                    current.removeClass("fc-today");
-                    current = $(this);
-                  }
-                });
-              </script>
-                <!-- <div class="footer"><p>By <a href="http://vtimbuc.net/">Valeriu Timbuc</a> for <a href="http://designmodo.com">DesignModo</a>.</p></div> -->
-            </div>
-          </div>
-<!--             <div class="one wide column">
-            </div> -->
-          <div class="seven wide column">
-            <div class="ui teal inverted segment" style="
-            width   : 115%;
-            height: 99%;">            
-              <div class="content">
-              <h2 class="ui dividing header"><i class="bar chart icon"></i>ข้อมูลสถิติ<a class="anchor" id="content"></a></h2><br>
+        <li class="dropdown">
+        <a href="#" data-toggle="dropdown"class="item "><i class="building icon"></i>ขอใช้ห้องแล็บ <i class="icon-arrow"></i></a>
+          <ul class="dropdown-menu">
+          <li><a href="room-request-admin.html"class="item "><i class="pointing up icon"></i>จองห้องแล็บ</a></li>
+          <li><a href="edit-admin.html"class="item "><i class="configure icon"></i>แก้ไขการจองห้อง</a></li>
+          <li><a href="edit-admin.html"class="item "><i class="remove circle icon"></i>ยกเลิกการจองห้อง</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+        <a href="index-auth-admin.html" data-toggle="dropdown"class="item "><i class="share icon"></i>กลับไปหน้าหลัก</a>
+        </li>
+
+        <li class="dropdown">
+        <a href="loginsuccessful.html" data-toggle="dropdown"class="item "><i class="sign out icon"></i>ออกจากระบบ </a>
+        </li>
+
+          <!--dropdown-->
+        <script src="css/room.js"></script> 
+      </ul>
+    </div>
+
+<!-- ส่วนขอใช้งาน -->
+    <div class="col-9 col-m-9">
+      <div class="ui container">
+        <div class="content" >
+          <div class="ui segment">
+            <form action="" class="ui form">
+              <h2 class="ui header"><i class="building icon"></i>ขอใช้ห้องแล็บ</h2>
+              <table class="ui definition table" >
+                  <tbody >
+                            <tr>
+                              <td>รหัสวิชา</td>
+                              <td>
+                              <!-- <td><input type="text" name="name" value=""></td> -->
+                                  <div class="ui search">
+                                    <div class="ui left icon input">
+                                      <div class="ui action input">
+                            <input type="text" placeholder="Search ID Subject"style="width: 180px;">
+                            <button class="ui icon button"onclick="error1()">
+                            <i class="search icon"></i>
+                            </button>
+                            <script>
+                                    function error1() {
+                                    document.getElementById('room1').style.display ="block";
+                                    }
+                                  </script>
+
+                                <div id="room1" style="display:none;"><font color="red"> &nbsp;Not result .</font></div>
+                        </div>  
+                          </div>
+                                  </div>
+                                      
+                            
+                              </td> 
+                            </tr>
+                            <tr>
+                              <td>หมู่เรียน</td>
+                              <td>
+                                  <div class="ui search">
+                                    <div class="ui left icon input">
+                                      <div class="ui action input">
+                            <input type="text" placeholder="Search Sec"style="width: 140px;">
+                            <button class="ui icon button"onclick="error2()">
+                            <i class="search icon"></i>
+                            </button>
+                            <script>
+                                    function error2() {
+                                    document.getElementById('room2').style.display ="block";
+                                    }
+                                  </script>
+
+                                <div id="room2" style="display:none;"><font color="red"> &nbsp;Not result .</font></div>
+                        </div>  
+                       
+                                    </div>
+                                  </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>ผู้สอน</td>
+                              <td>
+                                  <div class="ui search">
+                                    <div class="ui left icon input">
+                                       <div class="ui action input">
+                            <input type="text" placeholder="Search Instructor"style="width: 370px;">
+                            <button class="ui icon button"onclick="error3()">
+                            <i class="search icon"></i>
+                            </button>
+                            <script>
+                                    function error3() {
+                                    document.getElementById('room3').style.display ="block";
+                                    }
+                                  </script>
+
+                                <div id="room3" style="display:none;"><font color="red"> &nbsp;Not result .</font></div>
+                        </div>  
+                                    </div>
+                                  </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>จำนวนนิสิต</td>
+                              <td><div class="ui right labeled input">
+                                    <input type="text" placeholder="">
+                                    <div class="ui label">
+                                      คน
+                                    </div>
+                                  </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>วันที่</td>
+                              <td><div class="ui icon input">
+                                <input id="daterange" type="date" name="daterange" >
+                                <i class="calendar Outline icon"></i>
+                                <script>
+                                  document.getElementById("daterange").valueAsDate = new Date()
+                                </script>
+
+
+                              </div></td>
+                            </tr>
+                            <tr>
+                            <td>เวลา</td>
+                              <td>
+                              <div class="ui icon input">
+                                <input id="timePicker24Hour" type="time" name="timePicker24Hour">
+                                <i class="time Outline icon"></i>
+                              </div>&nbsp;&nbsp;ถึง&nbsp;
+
+                              <div class="ui icon input">
+                                <input id="timePicker24Hour" type="time" name="timePicker24Hour">
+                                <i class="time Outline icon"></i>
+                              </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>ห้องเรียน</td>
+                              <td>
+                                  <div class="ui search">
+                                    <div class="ui left icon input">
+                                       <div class="ui action input">
+                            <input type="text" placeholder="Search ID Class"style="width: 180px;">
+                            <button class="ui icon button"onclick="error4()">
+                            <i class="search icon"></i>
+                            </button>
+                            <script>
+                                    function error4() {
+                                    document.getElementById('room4').style.display ="block";
+                                    }
+                                  </script>
+
+                                <div id="room4" style="display:none;"><font color="red"> &nbsp;Not result .</font></div>
+                        </div>  
+                                    </div>
+                                  </div>
+                              </td>
+                            </tr>
+                            <tr>
+                    <td>อาคาร</td>
+                    <td>
+                      <select class="ui fluid dropdown">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>หมายเหตุ</td>
+                    <td><input type="text"></td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <button class="ui button" type="submit">ตรวจสอบ</button>
+              <button type="button" class="ui button" name="button">ค่าเริ่มต้น</button>
+
+            </form>
+            <br><br><br><br>
+
+            <div class="ui grid">
+              <div class="row">
+                <div class="one wide column">
+                </div>
+                  <div class="two wide column">
+                  <p>อุปกรณ์พื้นฐาน : </p<br><br><br><br><br><br><br><br><br><p>อุปกรณ์อื่นๆ : </p>
+                </div>
+                <div class="five wide column">
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>เครื่องคอมพิวเตอร์</label>
+                  </div><br><br>
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>ไมโครโฟนแบบมีสาย</label>
+                  </div><br><br>
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>จอรับภาพ</label>
+                  </div><br><br>
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>สายต่อ Notebook-LCD</label>
+                  </div><br><br><br>
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>ไมโครโฟนไร้สายแบบมือถือ</label>
+                  </div>
+                </div>
+                <div class="five wide column">
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>เครื่องฉายภาพ LCD</label>
+                  </div><br><br>
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>เครื่องนำเสนอภาพโปร่งแสง - ทึบแสง</label>
+                  </div><br><br>
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>เครื่องขยายเสียงพร้อมไมโครโฟน</label>
+                  </div><br><br>
+                </div>
+                <!-- <div class="four wide column">
+                  <div class="ui checkbox">
+                    <input type="checkbox">
+                    <label>Indeterminate</label>
+                  </div>
+                </div> -->
               </div>
-              <script>
-              var chart = AmCharts.makeChart( "chartdiv", {
-                "type": "serial",
-                "theme": "light",
-                "dataProvider": [ {
-                  "country": "USA",
-                  "visits": 2025
-                }, {
-                  "country": "China",
-                  "visits": 1882
-                }, {
-                  "country": "Japan",
-                  "visits": 1809
-                }, {
-                  "country": "Germany",
-                  "visits": 1322
-                }, {
-                  "country": "UK",
-                  "visits": 1122
-                }, {
-                  "country": "France",
-                  "visits": 1114
-                }, {
-                  "country": "India",
-                  "visits": 984
-                }, {
-                  "country": "Spain",
-                  "visits": 711
-                }, {
-                  "country": "Netherlands",
-                  "visits": 665
-                }, {
-                  "country": "Russia",
-                  "visits": 580
-                }, {
-                  "country": "South Korea",
-                  "visits": 443
-                }, {
-                  "country": "Canada",
-                  "visits": 441
-                }, {
-                  "country": "Brazil",
-                  "visits": 395
-                } ],
-                "valueAxes": [ {
-                  "gridColor": "#FFFFFF",
-                  "gridAlpha": 0.2,
-                  "dashLength": 0
-                } ],
-                "gridAboveGraphs": true,
-                "startDuration": 1,
-                "graphs": [ {
-                  "balloonText": "[[category]]: <b>[[value]]</b>",
-                  "fillAlphas": 0.8,
-                  "lineAlpha": 0.2,
-                  "type": "column",
-                  "valueField": "visits"
-                } ],
-                "chartCursor": {
-                  "categoryBalloonEnabled": false,
-                  "cursorAlpha": 0,
-                  "zoomable": false
-                },
-                "categoryField": "country",
-                "categoryAxis": {
-                  "gridPosition": "start",
-                  "gridAlpha": 0,
-                  "tickPosition": "start",
-                  "tickLength": 20
-                },
-                "export": {
-                  "enabled": true
-                }
-              } );
-              </script>
-              <div id="chartdiv"style="overflow: visible;text-align: left;background-color: white;"></div>
-              </div> 
-          </div>          
-        </div>
-      </div>
+            </div>
+
+            <div class="ui grid">
+              <div class="row">
+                <div class="one wide column">
+                </div>
+                  <div class="two wide column">
+                    <p>หมายเหตุ : </p>
+                  </div>
+                  <div class="nine wide column">
+                    <div class="ui form">
+                    <div class="field">
+                      <!-- <label>User Input</label> -->
+                      <textarea rows="2"></textarea>
+                      <!-- <input type="text"> -->
+                    </div>
+                  </div>
+                  </div>
+                  <!-- <div class="nine wide column">
+                  </div> -->
+
+              </div>
+            </div>
+            <br>
+            <button class="ui button" type="submit">ตกลง</button>
+            <button type="button" class="ui button" name="button">ล้างข้อความ</button>
+          </div>
+      </div>  
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-3 col-m-3">
-  </div>
-
-  <div class="col-9 col-m-9">
-    <div class="ui teal inverted segment">
-      <div class="ui container">
-        <div class="content">
-          <table class="ui striped table">
-            <h2 class="ui dividing header"><i class="history icon"></i>ข้อมูลการใช้ห้อง<a class="anchor" id="content"></a></h2>
-            <thead> 
-              <tr>
-              <!-- <tr class="ui inverted grey table"> -->
-                <th>เวลา</th>
-                <th>ห้อง</th>
-                <th>อาคาร</th>
-                <th>อาจารย์ผู้สอน</th>
-              <th>รหัสวิชา</th>
-              <th>ชื่อวิชา</th>
-              <th>หมู่เรียน</th>
-              <th>หมายเหตุ</th>
-              </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-            </tr>
-            <tr>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-            </tr>
-            <tr>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-              <td>Lorem ipsum dolor sit amet</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div><br>
-  </div>
-</div>
-
-  <div class="footer">
-    <p>Resize the browser window to see how the content respond to the resizing.</p>
-  </div>
+    
   
+<!-- ส่วนล่าง -->
+  <div class="footer">
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+  </div>
+
 </body>
 </html>
