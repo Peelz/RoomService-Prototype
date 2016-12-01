@@ -21,6 +21,19 @@
 	<script src="calendar-master/zabuto_calendar.min.js"></script>
 	<!--search-->
 	<script src="css/semantic.min.js"></script>
+		<!-- Time picker -->
+    <link rel="stylesheet" href="timerpicker/include/ui-1.10.0/ui-lightness/jquery-ui-1.10.0.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="timerpicker/jquery.ui.timepicker.css?v=0.3.3" type="text/css" />
+    <script type="text/javascript" src="timerpicker/include/ui-1.10.0/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" src="timerpicker/include/ui-1.10.0/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" src="timerpicker/include/ui-1.10.0/jquery.ui.tabs.min.js"></script>
+    <script type="text/javascript" src="timerpicker/include/ui-1.10.0/jquery.ui.position.min.js"></script>
+    <script type="text/javascript" src="timerpicker/jquery.ui.timepicker.js?v=0.3.3"></script>
+
+    <!-- Date Range -->
+    <script type="text/javascript" src="semantic-ui-daterangepicker/moment.js"></script>
+    <script type="text/javascript" src="semantic-ui-daterangepicker/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic-ui-daterangepicker/daterangepicker.css" />
 	
 <!-- <style>
 * {
@@ -227,30 +240,39 @@ body{
 					                    </td>
 					                  </tr>
 					                  <tr>
+					                  <tr>
 					                    <td>วันที่</td>
 					                    <td><div class="ui icon input">
-					                      <input id="daterange" type="date" name="daterange" >
+					                      <input id="date" type="text" name="daterange" >
 					                      <i class="calendar Outline icon"></i>
-					                      <script>
-					                      	document.getElementById("daterange").valueAsDate = new Date()
-					                      </script>
+                                            <script type="text/javascript">
+                                                $('#date').daterangepicker({
+                                                    format: 'YYYY-MM-DD',
+                                                    singleDatePicker: true,
+                                                    showDropdowns: true
 
+                                                });
+                                            </script>
 					                    </div></td>
 					                  </tr>
 					                  <tr>
 					                  <td>เวลา</td>
 					                    <td>
 					                    <div class="ui icon input">
-					                      <input id="timePicker24Hour" type="time" name="timePicker24Hour">
+					                      <input id="start_time" type="text" name="">
 					                      <i class="time Outline icon"></i>
 					                    </div>&nbsp;&nbsp;ถึง&nbsp;
 
 					                    <div class="ui icon input">
-					                      <input id="timePicker24Hour" type="time" name="timePicker24Hour">
+					                      <input id="end_time" type="text" name="">
 					                      <i class="time Outline icon"></i>
 					                    </div>
 					                    </td>
 					                  </tr>
+	                                    <script>
+	                                        $('#start_time').timepicker();
+	                                        $('#end_time').timepicker();
+	                                    </script>
 					                  <tr>
 					                    <td>ห้องเรียน</td>
 					                    <td>
